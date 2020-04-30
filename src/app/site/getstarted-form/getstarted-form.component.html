@@ -1,0 +1,17 @@
+<div class="container" id="getStartedFormDiv">
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-label>NAME</mat-label>
+            <input matInput type="text" name="name" [(ngModel)]="requestQueue.name">
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>EMAIL</mat-label>
+            <input matInput type="email" name="email" [(ngModel)]="requestQueue.email">
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>PHONE</mat-label>
+            <input matInput type="text" name="phone" [(ngModel)]="requestQueue.phone">
+        </mat-form-field><br>
+        <button mat-raised-button (click)="saveRequestQueue()" class="btn btn-primary">GET STARTED</button>
+    </form>
+</div>

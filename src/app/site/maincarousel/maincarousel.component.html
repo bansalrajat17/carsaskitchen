@@ -1,0 +1,31 @@
+<div id="carouselDiv" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#carouselDiv" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselDiv" data-slide-to="1"></li>
+    <li data-target="#carouselDiv" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img [src]="carouselImagePaths[0]" alt="Los Angeles" class="img-responsive">
+    </div>
+    <div class="carousel-item">
+      <img [src]="carouselImagePaths[1]" alt="Chicago" class="img-responsive">
+    </div>
+    <div class="carousel-item">
+      <img [src]="carouselImagePaths[2]" alt="New York" class="img-responsive">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#carouselDiv" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#carouselDiv" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>

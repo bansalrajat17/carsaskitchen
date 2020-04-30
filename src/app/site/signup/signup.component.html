@@ -1,0 +1,41 @@
+<form>
+    <mat-form-field appearance="fill">
+        <button type="button" mat-icon-button matPrefix>
+            <mat-icon>email</mat-icon>
+        </button>
+        <mat-label>NAME</mat-label>
+        <input matInput type="text" name="name" [(ngModel)]="userMaster.name">
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <button type="button" mat-icon-button matPrefix>
+            <mat-icon>email</mat-icon>
+        </button>
+        <mat-label>EMAIL</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="userMaster.email">
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <button type="button" mat-icon-button matPrefix>
+            <mat-icon>phone</mat-icon>
+        </button>
+        <mat-label>PHONE</mat-label>
+        <input matInput type="text" name="phone" [(ngModel)]="userMaster.phone">
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>PASSWORD</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="userMaster.password">
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>CONFIRM PASSWORD</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" id="confirmPassword">
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+    <button mat-raised-button class="form-control btn btn-primary" (click)="saveUserMaster()">SIGN UP</button>
+</form>
