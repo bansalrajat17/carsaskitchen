@@ -1,4 +1,4 @@
-/*import { HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -21,4 +21,4 @@ export class BasicAuthHttpInterceptorService implements HttpInterceptor {
     console.log("SETTED UP THE HEADERSS");
     return httpHandler.handle(httpRequest);
   }
-}*/
+}
