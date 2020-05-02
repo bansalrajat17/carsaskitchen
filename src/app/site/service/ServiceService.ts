@@ -12,6 +12,7 @@ export class ServiceService {
   constructor(private httpClient: HttpClient) { }
 
   findById(serviceId: string): Observable<Object> {
+    console.log('vdfdfsd');
     return this.httpClient.get(`${this.baseUrl}/get/ServiceSite/${serviceId}`);
   }
 }

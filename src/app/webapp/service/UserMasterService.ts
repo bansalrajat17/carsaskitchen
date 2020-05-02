@@ -27,7 +27,7 @@ export class UserMasterService {
     }
 
     get(userMaster:UserMaster){
-        return this.httpClient.get<UserMaster>(`${this.baseUrl}/authenticate/get/UserMaster/${userMaster.username}`);
+        return this.httpClient.get<UserMaster>(`${this.baseUrl}/authenticate/login/get/UserMaster/${userMaster.username}`);
     }
 
     save(userMaster: UserMaster) {
