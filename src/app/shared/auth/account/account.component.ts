@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationBarComponent } from 'src/app/site/navigation-bar/navigation-bar.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-account',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit() {
   }
+
+  closeAccount(){
+    this.dialog.closeAll();
+  }
+
+  
 
 }

@@ -1,4 +1,11 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  IgxTabsModule,
+  IgxCardModule,
+  IgxAvatarModule,
+  IgxButtonModule,
+  IgxRippleModule
+} from "igniteui-angular";
 import { NgModule } from '@angular/core';
 import { MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon/';
@@ -12,7 +19,6 @@ import { GetstartedFormComponent } from './site/getstarted-form/getstarted-form.
 import { HeaderComponent } from './site/header/header.component';
 import { HomeComponent } from './site/home/home.component';
 import { ItrComponent } from './site/itr/itr.component';
-import { LoginComponent } from './shared/auth/login/login.component';
 import { MaincarouselComponent } from './site/maincarousel/maincarousel.component';
 import { NavigationBarComponent } from './site/navigation-bar/navigation-bar.component';
 import { ServicesComponent } from './site/services/services.component';
@@ -21,11 +27,10 @@ import { GstComponent } from './site/gst/gst.component';
 import { HomeStatsComponent } from './site/home-stats/home-stats.component';
 import { AboutUsComponent } from './site/about-us/about-us.component';
 import { FormsModule } from '@angular/forms';
-import { RequestQueueService } from './webapp/service/RequestQueueService';
-import { SignupComponent } from './shared/auth/signup/signup.component';
 import { AccountComponent } from './shared/auth/account/account.component';
 import { TokenInterceptorService } from './site/service/interceptors/TokenInterceptorService';
-
+import { SignupComponent } from './shared/auth/signup/signup.component';
+import { LoginComponent } from './shared/auth/login/login.component';
 
 const appRoute: Routes = [
 
@@ -33,7 +38,6 @@ const appRoute: Routes = [
   { path: 'itr/:id', component: ItrComponent },
   { path: 'gst/:id', component: GstComponent },
   { path: 'compliance', component: ComplianceComponent },
-
 ];
 
 @NgModule({
@@ -42,7 +46,6 @@ const appRoute: Routes = [
     HeaderComponent,
     NavigationBarComponent,
     FooterComponent,
-    LoginComponent,
     MaincarouselComponent,
     HomeComponent,
     GetstartedFormComponent,
@@ -52,9 +55,10 @@ const appRoute: Routes = [
     GstComponent,
     ComplianceComponent,
     HomeStatsComponent,
+    AccountComponent,
     AboutUsComponent,
-    SignupComponent,
-    AccountComponent
+    LoginComponent,
+    SignupComponent
   ],
   entryComponents: [AccountComponent],
   imports: [
@@ -67,7 +71,12 @@ const appRoute: Routes = [
     MatDialogModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    IgxTabsModule,
+		IgxCardModule,
+		IgxAvatarModule,
+		IgxButtonModule,
+		IgxRippleModule
   ],
   providers: [
     {
@@ -78,4 +87,5 @@ const appRoute: Routes = [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

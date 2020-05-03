@@ -1,11 +1,14 @@
-<div class="container">
-    <div class="row">
-        <button class="btn btn-outline-success"> <a routerLink="#">LOGIN</a></button><br>
-        <button class="btn btn-outline-success"> <a routerLink="#">SIGNUP</a></button>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <router-outlet></router-outlet>
+<span class="close" title="CLOSE DIALOG" (click)="closeAccount()">X</span><br><br>
+<igx-tabs>
+    <igx-tabs-group label="LOGIN" icon="library_music">
+        <div><br>
+            <app-login></app-login>
         </div>
-    </div>
-</div>
+    </igx-tabs-group>
+    <igx-tabs-group label="SIGNUP" icon="favorite">
+        <br>
+        <div>
+            <app-signup></app-signup>
+        </div>
+    </igx-tabs-group>
+</igx-tabs>
