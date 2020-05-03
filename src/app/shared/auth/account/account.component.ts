@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationBarComponent } from 'src/app/site/navigation-bar/navigation-bar.component';
+import { NavigationBarComponent } from 'src/app/site/main/navigation-bar/navigation-bar.component';
 import { MatDialog } from '@angular/material';
 
 @Component({
