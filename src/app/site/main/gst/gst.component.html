@@ -1,21 +1,79 @@
 <div class="container">
-    <div>
-        <img class="img-responsive" [src]="banners[0]" />
-    </div><br><br>
     <div class="row">
-        <div class="col-md-6">{{ serviceSite.serviceIntro }}</div>
-        <div class="card col-md-3">
-            <h2 class="h2">TURNOVER LIMIT</h2>
-            <hr>
-            {{ serviceSite.turnoverLimit }}
+        <div class="col-md-6"> {{ serviceSite?.serviceHead + serviceSite?.serviceIntro }} <br><br><button mat-button
+                class="btn btn-success">FILE YOUR
+                GST RETURN NOW @799</button></div>
+        <div class="col-md-6">
+            <app-getstarted-form>
+            </app-getstarted-form>
         </div>
-        <div class="card col-md-3">
-            <h2 class="h2">ELIGIBILITY</h2>
-            <hr>
-            {{ serviceSite.eligibility }}
+    </div><br>
+    <div class="row">
+        <div class="col-md-2">
+            <ul>
+                <li><a>
+                        WHO CAN FILE ?
+                    </a></li>
+                <li><a>
+                        TYPES OF GST
+                    </a></li>
+                <li><a>
+                        REQUIREMENTS
+                    </a></li>
+                <li><a>
+                        BENEFITS
+                    </a></li>
+                <li><a>
+                        PENALTY
+                    </a></li>
+            </ul>
         </div>
-        <div>
+        <div class="offset-md-1 col-md-9 d-none">
+            <h6 class="h6" *ngFor="let sEligibility of serviceSite?.sEligibilityList"><label>
+                    {{ sEligibility.eligibilityDesc }}</label></h6>
         </div>
-        <app-getstarted-form>
-        </app-getstarted-form>
+        <div class="offset-md-1 col-md-9 d-none">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>RETURN FILING</th>
+                        <th>INCLUDES</th>
+                        <th>DUE DATE</th>
+                        <th>WHEN TO FILE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ssGstType of ssGstTypeArray">
+                        <td> {{ ssGstType.returnType }}</td>
+                        <td>{{ ssGstType.includes }}</td>
+                        <td>{{ ssGstType.dueDate }}</td>
+                        <td>{{ ssGstType.whenToFile }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="offset-md-1 col-md-9 d-none">
+            <h6 class="h6" *ngFor="let sDocumentRequired of serviceSite?.sDocumentRequiredList"><label>
+                    {{ sDocumentRequired.documentName }}</label></h6>
+        </div>
+        <div class="offset-md-1 col-md-9 d-block">
+            <h6 class="h6" *ngFor="let sBenefit of serviceSite?.sBenefitList"><label>
+                    {{ sBenefit.benefitName }}</label></h6>
+        </div>
+        <div class="offset-md-1 col-md-9 d">
+            Late Fees 50 Rs/Day
+        </div>
     </div>
+    <div class="row">
+        <h4 class="h4">
+            Why Choose Return Filing?</h4>
+        <ul>
+            <li>A Team of Experienced GST Professionals</li>
+            <li>Accurate Collection to reduce Tax</li>
+            <li>Human Assistance over Call “Return Filing </li>
+            <li>100 % Data Security</li>
+        </ul>
+
+    </div>
+    <app-testinomial></app-testinomial><br>
+</div>

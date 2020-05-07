@@ -1,7 +1,7 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IgxTabsModule, IgxCardModule, IgxAvatarModule, IgxButtonModule, IgxRippleModule } from 'igniteui-angular';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatTable, MatTableModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon/';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +32,7 @@ import { RightsectionComponent } from './webapp/dashboard/rightsection/rightsect
 import { UserprofileComponent } from './webapp/dashboard/rightsection/userprofile/userprofile.component';
 import { UserinvoicesComponent } from './webapp/dashboard/rightsection/userinvoices/userinvoices.component';
 import { InnerheaderComponent } from './webapp/dashboard/rightsection/innerheader/innerheader.component';
+import { TestinomialComponent } from './site/main/testinomial/testinomial.component';
 
 const appRoute: Routes = 
 [
@@ -85,12 +86,14 @@ const appRoute: Routes =
     RightsectionComponent,
     UserprofileComponent,
     UserinvoicesComponent,
-    InnerheaderComponent
+    InnerheaderComponent,
+    TestinomialComponent
   ],
   entryComponents: [AccountComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatTableModule,
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,

@@ -3,6 +3,7 @@ import { UserMaster } from 'src/app/webapp/orm/UserMaster';
 import { UserMasterService } from 'src/app/webapp/service/UserMasterService';
 import { Router } from '@angular/router';
 import { AccountComponent } from '../account/account.component';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -22,12 +23,22 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.userMasterService.authenticate(this.userMaster).subscribe(data => this.loginResult = data);
-    let userMasterDb = new UserMaster("", "", "", "", "", "", new Date(), new Date(), "", "");
-    this.userMasterService.get(this.userMaster).subscribe(data => userMasterDb = data);
-    this.accountComponent.closeAccount();
-    this.router.navigate(['dashboard']);
-    alert(`SUCCESS ${userMasterDb}`);
+    this.userMasterService.authenticate(this.userMaster).toPromise().then(() => {
+      this.accountComponent.closeAccount();
+      Swal.fire({
+        title: 'SUCCESS!',
+        text: 'REDIRECTING TO YOUR ACCOUNT',
+        icon: 'success'
+      }).then(() => { 
+        this.router.navigate(['dashboard']);
+      });
+    }).catch(function (e) {
+      Swal.fire({
+        title: 'Error!',
+        text: 'AUTHENTICATION FAILED',
+        icon: 'error',
+        confirmButtonText: 'RETRY'
+      });
+    });
   }
-
 }

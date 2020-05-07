@@ -19,6 +19,7 @@ export class UserMasterService {
         return this.httpClient.post<any>(`${this.baseUrl}/authenticate`, userMaster).pipe(map(
             userData => {
                 sessionStorage.setItem('username', userMaster.username);
+                alert('rtgdf');
                 sessionStorage.setItem('token', `Bearer ${userData.token}`);
                 return userData;
             }

@@ -5,14 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceService {
+export class ServiceSiteService {
 
   private baseUrl = "http://localhost:8080";
 
   constructor(private httpClient: HttpClient) { }
 
   findById(serviceId: string): Observable<Object> {
-    console.log('vdfdfsd');
     return this.httpClient.get(`${this.baseUrl}/get/ServiceSite/${serviceId}`);
   }
 }

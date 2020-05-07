@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ServiceService } from "../../service/ServiceService";
+import { ServiceSiteService } from '../../service/ServiceSiteService';
+import { SsGstTypeService } from '../../service/SsGstTypeService';
+import { SsGstType } from '../../orm/SsGstType';
 
 @Component({
   selector: 'app-gst',
@@ -9,14 +11,23 @@ import { ServiceService } from "../../service/ServiceService";
 })
 export class GstComponent implements OnInit {
   private serviceSite: any;
-  private str  = "./" 
-  private banners = [ "assets/images/banners/gst_banner_4.jpeg" , "assets/images/banners/gst_banner_2" ];
+  private banners = ["assets/images/banners/gst_banner_4.jpeg", "assets/images/banners/gst_banner_2"];
+  private ssGstTypeArray: Array<SsGstType> = [];
 
-  constructor(private serviceService: ServiceService, private activatedRoute: ActivatedRoute, private router: Router) { }
+
+  constructor(private serviceSiteService: ServiceSiteService, private ssGstTypeService: SsGstTypeService, private activatedRoute: ActivatedRoute, private router: Router) {
+
+  }
 
   ngOnInit() {
-    this.serviceService.findById(this.activatedRoute.snapshot.paramMap.get('id')
+
+    this.serviceSiteService.findById(this.activatedRoute.snapshot.paramMap.get('id')
     ).subscribe(data => this.serviceSite = data);
+
+    this.ssGstTypeService.findAll().subscribe(data => {
+      this.ssGstTypeArray = data;
+    });
+
   }
 
 }

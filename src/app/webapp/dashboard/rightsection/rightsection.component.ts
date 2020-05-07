@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserMasterService } from '../../service/UserMasterService';
 
 @Component({
   selector: 'app-rightsection',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightsectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public userMasterService:UserMasterService) { }
 
   ngOnInit() {
   }
+
+  logout(){
+    this.userMasterService.logOut();
+  }
+
 
 }
