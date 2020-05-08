@@ -1,38 +1,39 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { IgxTabsModule, IgxCardModule, IgxAvatarModule, IgxButtonModule, IgxRippleModule } from 'igniteui-angular';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatTable, MatTableModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon/';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { IgxAvatarModule, IgxButtonModule, IgxCardModule, IgxRippleModule, IgxTabsModule } from 'igniteui-angular';
 import { AppComponent } from './app.component';
+import { AccountComponent } from './shared/auth/account/account.component';
+import { LoginComponent } from './shared/auth/login/login.component';
+import { SignupComponent } from './shared/auth/signup/signup.component';
+import { AboutUsComponent } from './site/main/about-us/about-us.component';
+import { ComplianceComponent } from './site/main/compliance/compliance.component';
 import { FaqComponent } from './site/main/faq/faq.component';
 import { FooterComponent } from './site/main/footer/footer.component';
 import { GetstartedFormComponent } from './site/main/getstarted-form/getstarted-form.component';
+import { GstComponent } from './site/main/gst/gst.component';
 import { HeaderComponent } from './site/main/header/header.component';
+import { HomeStatsComponent } from './site/main/home-stats/home-stats.component';
 import { HomeComponent } from './site/main/home/home.component';
 import { ItrComponent } from './site/main/itr/itr.component';
+import { MainComponent } from './site/main/main.component';
 import { MaincarouselComponent } from './site/main/maincarousel/maincarousel.component';
 import { NavigationBarComponent } from './site/main/navigation-bar/navigation-bar.component';
-import { ServicesComponent } from './site/services/services.component';
-import { ComplianceComponent } from './site/main/compliance/compliance.component';
-import { GstComponent } from './site/main/gst/gst.component';
-import { HomeStatsComponent } from './site/main/home-stats/home-stats.component';
-import { AboutUsComponent } from './site/main/about-us/about-us.component';
-import { FormsModule } from '@angular/forms';
-import { AccountComponent } from './shared/auth/account/account.component';
+import { TestinomialComponent } from './site/main/testinomial/testinomial.component';
 import { TokenInterceptorService } from './site/service/interceptors/TokenInterceptorService';
-import { SignupComponent } from './shared/auth/signup/signup.component';
-import { LoginComponent } from './shared/auth/login/login.component';
-import { MainComponent } from './site/main/main.component';
+import { ServicesComponent } from './site/services/services.component';
 import { DashboardComponent } from './webapp/dashboard/dashboard.component';
 import { LeftsectionComponent } from './webapp/dashboard/leftsection/leftsection.component';
-import { RightsectionComponent } from './webapp/dashboard/rightsection/rightsection.component';
-import { UserprofileComponent } from './webapp/dashboard/rightsection/userprofile/userprofile.component';
-import { UserinvoicesComponent } from './webapp/dashboard/rightsection/userinvoices/userinvoices.component';
 import { InnerheaderComponent } from './webapp/dashboard/rightsection/innerheader/innerheader.component';
-import { TestinomialComponent } from './site/main/testinomial/testinomial.component';
+import { RightsectionComponent } from './webapp/dashboard/rightsection/rightsection.component';
+import { UserinvoicesComponent } from './webapp/dashboard/rightsection/userinvoices/userinvoices.component';
+import { UserprofileComponent } from './webapp/dashboard/rightsection/userprofile/userprofile.component';
+import { ServiceComponent } from './site/main/service/service.component';
 
 const appRoute: Routes = 
 [
@@ -71,6 +72,7 @@ const appRoute: Routes =
     HomeComponent,
     GetstartedFormComponent,
     FaqComponent,
+    ServiceComponent,
     ServicesComponent,
     ItrComponent,
     GstComponent,
