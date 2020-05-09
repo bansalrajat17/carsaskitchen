@@ -10,10 +10,12 @@
  .dropdown-item:hover{
      background-color: blue;
  }*/
+
  /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
+
 .nav-menu, .nav-menu * {
     margin: 0;
     padding: 0;
@@ -137,6 +139,7 @@
   }
   
   /* Mobile Nav Toggle */
+
   #mobile-nav-toggle {
     position: fixed;
     right: 0;
@@ -246,6 +249,7 @@
   }
   
   /* Mobile Nav body classes */
+
   body.mobile-nav-active {
     overflow: hidden;
   }

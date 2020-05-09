@@ -1,5 +1,6 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { NgwWowModule } from 'ngx-wow';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon/';
@@ -34,6 +35,8 @@ import { RightsectionComponent } from './webapp/dashboard/rightsection/rightsect
 import { UserinvoicesComponent } from './webapp/dashboard/rightsection/userinvoices/userinvoices.component';
 import { UserprofileComponent } from './webapp/dashboard/rightsection/userprofile/userprofile.component';
 import { ServiceComponent } from './site/main/service/service.component';
+import { FactsComponent } from './site/main/facts/facts.component';
+import { FeatureServicesComponent } from './site/main/feature-services/feature-services.component';
 
 const appRoute: Routes = 
 [
@@ -89,12 +92,15 @@ const appRoute: Routes =
     UserprofileComponent,
     UserinvoicesComponent,
     InnerheaderComponent,
-    TestinomialComponent
+    TestinomialComponent,
+    FactsComponent,
+    FeatureServicesComponent
   ],
   entryComponents: [AccountComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgwWowModule,
     MatTableModule,
     MatButtonModule,
     MatIconModule,
