@@ -8,26 +8,26 @@
                     data-target="ITR_DROPDOWN" aria-expanded="false" title="INCOME TAX RETURN">ITR
                     FILING</a>
                 <div class="dropdown-menu" aria-labelledby="ITR_DROPDOWN">
-                    <a class="dropdown-item" routerLink="/itr/1">Income Tax Filing
+                    <a routerLink="/itr/1">Income Tax Filing
                         for
                         Salaried (ITR-I)</a>
-                    <a class="dropdown-item" routerLink="/itr/2">ITR
+                    <a routerLink="/itr/2">ITR
                         Filing for
                         Professional/Freelance</a>
-                    <a class="dropdown-item" routerLink="/itr/3">Income Tax
+                    <a routerLink="/itr/3">Income Tax
                         Filing for
                         Capital gain
                         Income</a>
-                    <a class="dropdown-item" routerLink="/itr/4">ITR Filing
+                    <a routerLink="/itr/4">ITR Filing
                         for Small
                         Business</a>
 
-                    <a class="dropdown-item" routerLink="/itr/5">Income
+                    <a routerLink="/itr/5">Income
                         Tax Filing
                         for Salaried
                         - Multiple Form 16</a>
-                    <a class="dropdown-item" routerLink="/itr/6">Income Tax Filing for NGOs</a>
-                    <a class="dropdown-item" routerLink="/itr/7">Income Tax Filing for
+                    <a routerLink="/itr/6">Income Tax Filing for NGOs</a>
+                    <a routerLink="/itr/7">Income Tax Filing for
                         Traders</a>
                 </div>
             </li>
@@ -35,13 +35,13 @@
                     data-target="GST_DROPDOWN" aria-expanded="false" title="GOODS & SERVICES TAX">GST
                     FILING</a>
                 <div class="dropdown-menu" aria-labelledby="GST_DROPDOWN">
-                    <a class="dropdown-item" routerLink="/gst/11">Monthly GST Return Filing -
+                    <a routerLink="/gst/11">Monthly GST Return Filing -
                         Basic</a>
-                    <a class="dropdown-item" routerLink="/gst/12">GST Return Filing - Standard</a>
-                    <a class="dropdown-item" routerLink="/gst/13">GST Return Filing - Deluxe</a>
-                    <a class="dropdown-item" routerLink="/gst/14">GST Filing - Premium</a>
-                    <a class="dropdown-item" routerLink="/gst/15">GST 3B Monthly Filing</a>
-                    <a class="dropdown-item" routerLink="/gst/16">GST Filing - NIL
+                    <a routerLink="/gst/12">GST Return Filing - Standard</a>
+                    <a routerLink="/gst/13">GST Return Filing - Deluxe</a>
+                    <a routerLink="/gst/14">GST Filing - Premium</a>
+                    <a routerLink="/gst/15">GST 3B Monthly Filing</a>
+                    <a routerLink="/gst/16">GST Filing - NIL
                         Return</a>
                 </div>
             </li>
@@ -49,8 +49,8 @@
                     data-target="COMPLIANCE_DROPDOWN" aria-expanded="false" title="COMPLIANCES">COMPLIANCES
                 </a>
                 <div class="dropdown-menu" aria-labelledby="COMPLIANCE_DROPDOWN">
-                    <a class="dropdown-item" routerLink="/compliance">PAYROLL</a>
-                    <a class="dropdown-item" routerLink="/gst-filing/tax-accounting">PF REGISTRATION</a>
+                    <a routerLink="/compliance">PAYROLL</a>
+                    <a routerLink="/gst-filing/tax-accounting">PF REGISTRATION</a>
                 </div>
             </li>
         </ul>
@@ -63,35 +63,58 @@
 
 <nav id="nav-menu-container">
     <ul class="nav-menu">
-      <!--li class="menu-active"><a href="#intro">ITR</a></li-->
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#team">Team</a></li>
-      <li class="menu-has-children"><a href="">ITR</a>
-        <ul>
-          <li><a href="#">Drop Down 1</a></li>
-          <li><a href="#">Drop Down 3</a></li>
-          <li><a href="#">Drop Down 4</a></li>
-          <li><a href="#">Drop Down 5</a></li>
-        </ul>
-      </li>
-      <li class="menu-has-children"><a href="">GST</a>
-        <ul>
-          <li><a href="#">Drop Down 1</a></li>
-          <li><a href="#">Drop Down 3</a></li>
-          <li><a href="#">Drop Down 4</a></li>
-          <li><a href="#">Drop Down 5</a></li>
-        </ul>
-      </li>
-      <li class="menu-has-children"><a href="">COMPLIANCE</a>
-        <ul>
-          <li><a href="#">Drop Down 1</a></li>
-          <li><a href="#">Drop Down 3</a></li>
-          <li><a href="#">Drop Down 4</a></li>
-          <li><a href="#">Drop Down 5</a></li>
-        </ul>
-      </li>
-      <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <!--li><a href="#portfolio">Portfolio</a></li-->
+        <li><a href="#team">Team</a></li>
+        <li class="menu-has-children"><a href="">ITR</a>
+            <ul>
+                <li><a routerLink="/itr/1">Income Tax Filing
+                        for
+                        Salaried (ITR-I)</a></li>
+                <li><a routerLink="/itr/2">ITR
+                        Filing for
+                        Professional/Freelance</a></li>
+                <li><a routerLink="/itr/3">Income Tax
+                        Filing for
+                        Capital gain
+                        Income</a></li>
+                <li><a routerLink="/itr/4">ITR Filing
+                        for Small
+                        Business</a></li>
+
+                <li><a routerLink="/itr/5">Income
+                        Tax Filing
+                        for Salaried
+                        - Multiple Form 16</a></li>
+                <li><a routerLink="/itr/6">Income Tax Filing for NGOs</a></li>
+                <li><a routerLink="/itr/7">Income Tax Filing for
+                        Traders</a></li>
+
+            </ul>
+        </li>
+        <li class="menu-has-children"><a href="">GST</a>
+            <ul>
+                <li><a routerLink="/gst/11">Monthly GST Return Filing -
+                        Basic</a></li>
+                <li><a routerLink="/gst/12">GST Return Filing - Standard</a></li>
+                <li><a routerLink="/gst/13">GST Return Filing - Deluxe</a></li>
+                <li><a routerLink="/gst/14">GST Filing - Premium</a></li>
+                <li><a routerLink="/gst/15">GST 3B Monthly Filing</a></li>
+                <li><a routerLink="/gst/16">GST Filing - NIL
+                        Return</a></li>
+            </ul>
+        </li>
+        <li class="menu-has-children"><a href="">COMPLIANCE</a>
+            <ul>
+                <li><a routerLink="/compliance">PAYROLL</a></li>
+                <li> <a routerLink="/gst-filing/tax-accounting">PF REGISTRATION</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+        <button type="button" title="LOGIN/SIGNUP" id="btnLogin" class="btn btn-outline-success mr-3"
+                    mat-raised-button (click)="openAccount()">LOGIN / SIGN-UP</button>
+       
+
     </ul>
-  </nav><!-- #nav-menu-container -->
+</nav><!-- #nav-menu-container -->
