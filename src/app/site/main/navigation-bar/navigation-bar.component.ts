@@ -12,6 +12,7 @@ export class NavigationBarComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+
      // Initiate superfish on nav menu
      (<any>$('.nav-menu')).superfish({
       animation: {
