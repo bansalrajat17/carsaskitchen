@@ -26,6 +26,7 @@
     "@types/jszip": "^3.1.7",
     "@visurel/iconify-angular": "0.0.7",
     "bootstrap": "^4.4.1",
+    "bourbon": "^4.3.4",
     "counterup": "^1.0.2",
     "flag-icon-css": "^3.4.6",
     "font-awesome": "^4.7.0",

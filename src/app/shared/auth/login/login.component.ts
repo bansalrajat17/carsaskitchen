@@ -17,6 +17,13 @@ export class LoginComponent implements OnInit {
   hide = true;
 
   constructor(public userMasterService: UserMasterService, public router: Router, public accountComponent: AccountComponent) {
+    $('.toggle').on('click', function () {
+      $('.container').stop().addClass('active');
+    });
+
+    $('.close').on('click', function () {
+      $('.container').stop().removeClass('active');
+    });
   }
 
   ngOnInit() {
@@ -29,7 +36,7 @@ export class LoginComponent implements OnInit {
         title: 'SUCCESS!',
         text: 'REDIRECTING TO YOUR ACCOUNT',
         icon: 'success'
-      }).then(() => { 
+      }).then(() => {
         this.router.navigate(['dashboard']);
       });
     }).catch(function (e) {

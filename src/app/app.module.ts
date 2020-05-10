@@ -37,6 +37,10 @@ import { UserprofileComponent } from './webapp/dashboard/rightsection/userprofil
 import { ServiceComponent } from './site/main/service/service.component';
 import { FactsComponent } from './site/main/facts/facts.component';
 import { FeatureServicesComponent } from './site/main/feature-services/feature-services.component';
+import { ActionComponent } from './site/main/action/action.component';
+import { InformationComponent } from '../app/site/main/information/information.component';
+import { InfoTabComponent } from '../app/site/main/info-tab/info-tab.component';
+
 
 const appRoute: Routes = 
 [
@@ -94,7 +98,10 @@ const appRoute: Routes =
     InnerheaderComponent,
     TestinomialComponent,
     FactsComponent,
-    FeatureServicesComponent
+    FeatureServicesComponent,
+    ActionComponent,
+    InformationComponent,
+    InfoTabComponent
   ],
   entryComponents: [AccountComponent],
   imports: [
