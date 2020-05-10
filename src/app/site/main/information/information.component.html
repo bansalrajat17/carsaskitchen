@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 vertab-container">
+      <div class="col-lg-3 col-md-3 col-sm-3  vertab-menu">
+        <div class="list-group">
+          <a href="#" class="list-group-item text-left"> WHO CAN FILE ? </a>
+          <a href="#" class="list-group-item text-left"> TYPES OF GST </a>
+          <a href="#" class="list-group-item text-left"> REQUIREMENTS </a>
+          <a href="#" class="list-group-item text-left"> BENEFITS </a>
+          <a href="#" class="list-group-item text-left"> PENALTY </a>
+        </div>
+      </div>
+      <div id="accordion" class="col-lg-9 col-md-9 col-sm-9 col-xs-12 vertab-accordion panel-group">
+        <div class="vertab-content">
+          <div class="panel-heading">
+            <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+              WHO CAN FILE ?
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <h6 class="h6" *ngFor="let sEligibility of serviceSite?.sEligibilityList"><label>
+                  {{ sEligibility?.eligibilityDesc }}</label></h6>
+            </div>
+          </div>
+          <div class="vertab-content">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+              <h4 class="panel-title">
+                This is Heading 2
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">Pellentesque dolor lorem, feugiat nec est et, luctus dignissim diam. Vestibulum at
+                fringilla nulla, vel fermentum dui. Praesent rhoncus hendrerit risus, vitae tincidunt justo pellentesque
+                in. Morbi pretium ipsum ut odio malesuada convallis. Etiam eu ipsum vitae erat vehicula sodales. Sed
+                dapibus pretium purus, ac pretium sapien dapibus at. Pellentesque dolor lorem, feugiat nec est et,
+                luctus dignissim diam. Vestibulum at fringilla nulla, vel fermentum dui. Praesent rhoncus hendrerit
+                risus, vitae tincidunt justo pellentesque in. Morbi pretium ipsum ut odio malesuada convallis. Etiam eu
+                ipsum vitae erat vehicula sodales. Sed dapibus pretium purus, ac pretium sapien dapibus at. Pellentesque
+                dolor lorem, feugiat nec est et, luctus dignissim diam. Vestibulum at fringilla nulla, vel fermentum
+                dui. Praesent rhoncus hendrerit risus, vitae tincidunt justo pellentesque in. Morbi pretium ipsum ut
+                odio malesuada convallis. Etiam eu ipsum vitae erat vehicula sodales. Sed dapibus pretium purus, ac
+                pretium sapien dapibus at. Pellentesque dolor lorem, feugiat nec est et, luctus dignissim diam.
+                Vestibulum at fringilla nulla, vel fermentum dui. Praesent rhoncus hendrerit risus, vitae tincidunt
+                justo pellentesque in. Morbi pretium ipsum ut odio malesuada convallis. Etiam eu ipsum vitae erat
+                vehicula sodales. Sed dapibus pretium purus, ac pretium sapien dapibus at.</div>
+            </div>
+          </div>
+          <div class="vertab-content">
+            <div class="panel-heading">
+              <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
+                This is Heading 3
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">Quisque aliquet vitae arcu ac pharetra. Suspendisse at erat at lacus lobortis
+                sodales sed et dolor. Maecenas egestas felis sit amet rhoncus hendrerit. Nam condimentum diam vitae
+                dictum euismod. Suspendisse sit amet egestas lectus. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Integer nisl nulla, porta quis pulvinar et, semper a diam. </div>
+            </div>
+          </div>
+          <div class="vertab-content">
+            <div class="panel-heading">
+              <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
+                This is Heading 4
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">Nunc condimentum ipsum ultricies augue blandit ultricies. Pellentesque velit
+                purus, pretium et diam et, volutpat fermentum lorem. Quisque quam nulla, finibus in quam eu, tempor
+                dictum risus. Nullam molestie ante eu mauris convallis, non volutpat nibh tincidunt. </div>
+            </div>
+          </div>
+          <div class="vertab-content">
+            <div class="panel-heading">
+              <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">
+                This is Heading 5
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+              <div class="panel-body">In in rutrum arcu, eget euismod massa. Donec et mollis erat. Praesent iaculis nunc
+                sit amet ante ultricies congue. Maecenas venenatis ut dolor eget malesuada. Pellentesque pharetra
+                convallis est. Donec efficitur gravida dolor, ac ullamcorper lorem laoreet non. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
