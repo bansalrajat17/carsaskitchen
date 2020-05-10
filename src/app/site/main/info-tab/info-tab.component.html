@@ -1,26 +1,100 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12"> 
-      <!-- Nav tabs -->
-      <div class="card">
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home"></i>  <span>Home</span></a></li>
-          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-user"></i>  <span>Profile</span></a></li>
-          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i>  <span>Messages</span></a></li>
-          <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-cog"></i>  <span>Settings</span></a></li>
-          <li role="presentation"><a href="#extra" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-plus-square-o"></i>  <span>extra</span></a></li>
-        </ul>
-        
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="home">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-          <div role="tabpanel" class="tab-pane" id="profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-          <div role="tabpanel" class="tab-pane" id="messages">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-          <div role="tabpanel" class="tab-pane" id="settings">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
-          <div role="tabpanel" class="tab-pane" id="extra">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
-        </div>
-      </div>
+<section class="container">
+  <nav>
+    <ul class="nav nav-tabs clearfix" role="tablist">
+      <li class="activeTab"><a data-toggle="tab" href="#whoCanFile">WHO CAN FILE ?</a></li>
+      <li class="activeTab"><a data-toggle="tab" href="#typesOfGst">TYPES OF GST</a></li>
+      <li class="activeTab"><a data-toggle="tab" href="#requirements">REQUIREMENTS</a></li>
+      <li class="activeTab"><a data-toggle="tab" href="#benefits">BENEFITS</a></li>
+      <li class="activeTab"><a data-toggle="tab" href="#penalty">PENALTY</a></li>
+    </ul>
+  </nav>
+  <div class="tab-content">
+    <div id="whoCanFile" class="tab-pane fadein active">
+      <ul *ngFor="let sEligibility of serviceSite?.sEligibilityList">
+        <li class="text-white d-flex justify-content-center">
+         <i [ngClass]="sEligibility.icon"></i> {{ sEligibility.eligibilityDesc }}</li>
+      </ul>
+    </div>
+    <div id="typesOfGst" class="tab-pane fade">
+      <table class="table table-hover text-white" role="table">
+        <thead>
+          <tr>
+            <th>RETURN FILING</th>
+            <th>INCLUDES</th>
+            <th>DUE DATE</th>
+            <th>WHEN TO FILE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ssGstType of ssGstTypeArray">
+            <td> {{ ssGstType.returnType }}</td>
+            <td>{{ ssGstType.includes }}</td>
+            <td>{{ ssGstType.dueDate }}</td>
+            <td>{{ ssGstType.whenToFile }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="requirements" class="tab-pane fade">
+      <ul *ngFor="let sDocumentRequired of serviceSite?.sDocumentRequiredList">
+        <li class="text-white d-flex justify-content-center">
+          {{ sDocumentRequired.documentName }}</li>
+      </ul>
+    </div>
+    <div id="benefits" class="tab-pane fade">
+      <ul *ngFor="let sBenefit of serviceSite?.sBenefitList">
+        <li class="text-white d-flex justify-content-center">
+          {{ sBenefit.benefitName }}</li>
+      </ul>
+    </div>
+    <div id="penalty" class="tab-pane fade">
+      <ul>
+        <li class="text-white d-flex justify-content-center">Late Fees 50 Rs/Day</li>
+      </ul>
     </div>
   </div>
-</div>
+</section>
 
+<!--section class="container">
+  <button> To toggle between vertical and horizontal tabs, please click here </button>
+  <h5> :: If the screen WIDTH is less than 768px the tabs will be transformed to accordion </h5>
+    <nav>
+        <ul class="clearfix">                    
+            <li> <a href="#" data-toggle="tab" data-target="#content1" class="activeTab">  Option 1  </a> </li>
+            <li> <a href="#" data-toggle="tab" data-target="#content2">  Option 2  </a> </li>
+            <li> <a href="#" data-toggle="tab" data-target="#content3">  Option 3  </a> </li>
+            <li> <a href="#" data-toggle="tab" data-target="#content4">  Option 3  </a> </li>
+            <li> <a href="#" data-toggle="tab" data-target="#content5">  Option 3  </a> </li>
+        </ul>
+    </nav>  
+    <section class="tab-content navContent">
+      <article>
+           <input  type="checkbox" name="op1" />
+           <span class="smallHide"> <a>Option 1</a> </span>               
+           <div class="tab-pane fade in active theContent" id="content1">                     
+               <h1> Oh lovely </h1>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+               </p>
+          </div>
+      </article>
+      <article>
+          <input  type="checkbox" name="op1" />
+          <span class="smallHide"> <a>Option 2</a> </span>                
+          <div class="tab-pane fade theContent" id="content2">                     
+               <h1> What do you think </h1>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+               </p>
+          </div>
+      </article>
+      <article>
+          <input  type="checkbox" name="op1" />
+          <span class="smallHide"> <a>Option 3</a> </span>                
+          <div class="tab-pane fade theContent" id="content3">                     
+               <h1> Heading 3 </h1>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+               </p>
+          </div>
+      </article>                               
+    </section>      
+</section-->
+<!-- Container -->
