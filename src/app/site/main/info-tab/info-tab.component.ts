@@ -3,6 +3,9 @@ import { SsGstType } from '../../orm/SsGstType';
 import { ServiceSiteService } from '../../service/ServiceSiteService';
 import { SsGstTypeService } from '../../service/SsGstTypeService';
 import { ActivatedRoute, Router } from '@angular/router';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+//import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+
 
 @Component({
   selector: 'app-info-tab',
@@ -15,6 +18,7 @@ export class InfoTabComponent implements OnInit {
   private serviceSite: any;
   private banners = ["assets/images/banners/gst_banner_4.jpeg", "assets/images/banners/gst_banner_2"];
   private ssGstTypeArray: Array<SsGstType> = [];
+  private faCoffee = faCoffee;
 
   constructor(private serviceSiteService: ServiceSiteService, private ssGstTypeService: SsGstTypeService, private activatedRoute: ActivatedRoute, private router: Router) { }
 

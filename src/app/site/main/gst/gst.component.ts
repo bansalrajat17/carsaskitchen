@@ -4,6 +4,7 @@ import { ServiceSiteService } from '../../service/ServiceSiteService';
 import { SsGstTypeService } from '../../service/SsGstTypeService';
 import { SsGstType } from '../../orm/SsGstType';
 
+
 @Component({
   selector: 'app-gst',
   templateUrl: './gst.component.html',

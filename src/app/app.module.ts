@@ -8,6 +8,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { IgxAvatarModule, IgxButtonModule, IgxCardModule, IgxRippleModule, IgxTabsModule } from 'igniteui-angular';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
+
 import { AppComponent } from './app.component';
 import { AccountComponent } from './shared/auth/account/account.component';
 import { LoginComponent } from './shared/auth/login/login.component';
@@ -107,6 +109,7 @@ const appRoute: Routes =
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
     NgwWowModule,
     MatTableModule,
     MatButtonModule,

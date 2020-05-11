@@ -12,7 +12,8 @@
     <div id="whoCanFile" class="tab-pane fadein active">
       <ul *ngFor="let sEligibility of serviceSite?.sEligibilityList">
         <li class="text-white d-flex justify-content-center">
-         <i [ngClass]="sEligibility.icon"></i> {{ sEligibility.eligibilityDesc }}</li>
+          <fa-icon [icon]="['fas','faCoffee']" size="lg"></fa-icon> {{ sEligibility.eligibilityDesc }}
+        </li>
       </ul>
     </div>
     <div id="typesOfGst" class="tab-pane fade">
