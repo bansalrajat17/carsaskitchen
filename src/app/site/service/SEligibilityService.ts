@@ -11,7 +11,7 @@ export class SsEligibilityService {
 
   constructor(private httpClient: HttpClient) { }
 
-  findByServiceId(serviceId:string) {
-    return this.httpClient.get<SEligibility[]>(`${this.baseUrl}/get/SEligibilityList/ServiceId/${serviceId}`);
+  findByServiceNo(serviceNo:number) {
+    return this.httpClient.get<SEligibility[]>(`${this.baseUrl}/get/SEligibilityList/ServiceNo/${serviceNo}`);
   }
 }

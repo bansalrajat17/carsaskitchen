@@ -11,7 +11,11 @@ export class ContentSiteService {
 
   constructor(private httpClient: HttpClient) { }
 
-  findById(contentNo: string): Observable<Object> {
-    return this.httpClient.get(`${this.baseUrl}/get/ContentSite/${contentNo}`);
+  findById(no: number) {
+    return this.httpClient.get(`${this.baseUrl}/get/ContentSite/no/${no}`);
+  }
+
+  findAllById(nos:string[]){
+    return this.httpClient.post(`${this.baseUrl}/get/ContentSiteList/nos`,nos);
   }
 }

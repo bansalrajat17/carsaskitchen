@@ -5,13 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceSiteService {
+export class TestimonialSiteService {
 
   private baseUrl = "http://localhost:8080";
 
   constructor(private httpClient: HttpClient) { }
 
-  findById(no: number) {
-    return this.httpClient.get(`${this.baseUrl}/get/ServiceSite/no/${no}`);
+  findById(id: number): Observable<Object> {
+    return this.httpClient.get(`${this.baseUrl}/get/TestimonialSite/${id}`);
   }
 }

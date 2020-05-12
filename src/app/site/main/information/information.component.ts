@@ -139,7 +139,7 @@ export class InformationComponent implements OnInit {
         rva_func.apply(tc_breakpoint);
       });
     })($);
-    this.serviceSiteService.findById(this.activatedRoute.snapshot.paramMap.get('id')
+    this.serviceSiteService.findById(+this.activatedRoute.snapshot.paramMap.get('id')
     ).subscribe(data => this.serviceSite = data);
 
     this.ssGstTypeService.findAll().subscribe(data => {

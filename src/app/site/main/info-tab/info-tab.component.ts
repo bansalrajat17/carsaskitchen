@@ -23,7 +23,7 @@ export class InfoTabComponent implements OnInit {
   constructor(private serviceSiteService: ServiceSiteService, private ssGstTypeService: SsGstTypeService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.serviceSiteService.findById(this.activatedRoute.snapshot.paramMap.get('id')
+    this.serviceSiteService.findById(+this.activatedRoute.snapshot.paramMap.get('id')
     ).subscribe(data => this.serviceSite = data);
 
     this.ssGstTypeService.findAll().subscribe(data => {

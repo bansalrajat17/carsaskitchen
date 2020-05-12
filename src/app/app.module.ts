@@ -27,7 +27,6 @@ import { ItrComponent } from './site/main/itr/itr.component';
 import { MainComponent } from './site/main/main.component';
 import { MaincarouselComponent } from './site/main/maincarousel/maincarousel.component';
 import { NavigationBarComponent } from './site/main/navigation-bar/navigation-bar.component';
-import { TestinomialComponent } from './site/main/testinomial/testinomial.component';
 import { TokenInterceptorService } from './site/service/interceptors/TokenInterceptorService';
 import { ServicesComponent } from './site/services/services.component';
 import { DashboardComponent } from './webapp/dashboard/dashboard.component';
@@ -42,6 +41,7 @@ import { FeatureServicesComponent } from './site/main/feature-services/feature-s
 import { ActionComponent } from './site/main/action/action.component';
 import { InformationComponent } from '../app/site/main/information/information.component';
 import { InfoTabComponent } from '../app/site/main/info-tab/info-tab.component';
+import { TestimonialComponent } from './site/main/testimonial/testimonial.component';
 
 
 const appRoute: Routes = 
@@ -98,12 +98,12 @@ const appRoute: Routes =
     UserprofileComponent,
     UserinvoicesComponent,
     InnerheaderComponent,
-    TestinomialComponent,
     FactsComponent,
     FeatureServicesComponent,
     ActionComponent,
     InformationComponent,
-    InfoTabComponent
+    InfoTabComponent,
+    TestimonialComponent
   ],
   entryComponents: [AccountComponent],
   imports: [
