@@ -42,6 +42,7 @@ import { ActionComponent } from './site/main/action/action.component';
 import { InformationComponent } from '../app/site/main/information/information.component';
 import { InfoTabComponent } from '../app/site/main/info-tab/info-tab.component';
 import { TestimonialComponent } from './site/main/testimonial/testimonial.component';
+import { MonoTestimonialComponent } from './site/main/testimonial/mono-testimonial/mono-testimonial.component';
 
 
 const appRoute: Routes = 
@@ -103,7 +104,8 @@ const appRoute: Routes =
     ActionComponent,
     InformationComponent,
     InfoTabComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    MonoTestimonialComponent
   ],
   entryComponents: [AccountComponent],
   imports: [

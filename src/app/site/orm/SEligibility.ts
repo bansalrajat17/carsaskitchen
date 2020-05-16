@@ -6,7 +6,7 @@ export class SEligibility extends Site {
     constructor(public no: number,
         public name: string,
         public head: string,
-        public description: string, public ssEligibilityList
+        public description: string, public ssEligibilitySet
             : SsEligibility[],
         createdDate: Date,
         modifiedDate: Date,

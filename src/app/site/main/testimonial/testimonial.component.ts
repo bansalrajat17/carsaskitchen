@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TestimonialSiteService } from '../../service/TestimonialSiteService';
+import { STestimonialService } from '../../service/STestimonialService';
 
 @Component({
   selector: 'app-testimonial',
@@ -9,7 +9,7 @@ import { TestimonialSiteService } from '../../service/TestimonialSiteService';
 export class TestimonialComponent implements OnInit {
 
   
-  constructor(private testimonialSiteService: TestimonialSiteService) { }
+  constructor(private sTestimonialService: STestimonialService) { }
 
   ngOnInit() {
   }

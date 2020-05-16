@@ -14,7 +14,7 @@ export class AboutUsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.contentSiteService.findAllById([1, 2, 3]).subscribe(data => this.contentSiteArray = data);
+    this.contentSiteService.findAllById([1, 2, 3,4]).subscribe(data => this.contentSiteArray = data);
   }
 
 }

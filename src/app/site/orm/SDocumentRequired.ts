@@ -1,4 +1,3 @@
-import { AuditParameters } from "../../webapp/orm/AuditParameters";
 import { ServiceSite } from './ServiceSite';
 import { Site } from './Site';
 

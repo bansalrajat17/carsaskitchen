@@ -10,9 +10,9 @@
   </nav>
   <div class="tab-content">
     <div id="whoCanFile" class="tab-pane fadein active">
-      <ul *ngFor="let sEligibility of serviceSite?.sEligibilityList">
+      <ul *ngFor="let ssEligibility of serviceSite?.ssEligibilitySet">
         <li class="text-white d-flex justify-content-center">
-          <fa-icon [icon]="faCoffee"></fa-icon> {{ stEligibility.eligibilityDesc }}
+          <fa-icon [icon]="faCoffee"></fa-icon> {{ ssEligibility.seligibility.description }}
         </li>
       </ul>
     </div>
