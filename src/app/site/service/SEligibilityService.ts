@@ -5,7 +5,7 @@ import { SEligibility } from '../orm/SEligibility';
 @Injectable({
   providedIn: 'root'
 })
-export class SsEligibilityService {
+export class SEligibilityService {
 
   private baseUrl = "http://localhost:8080";
 

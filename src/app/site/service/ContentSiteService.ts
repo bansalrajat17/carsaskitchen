@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ContentSite } from '../orm/ContentSite';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class ContentSiteService {
     return this.httpClient.get(`${this.baseUrl}/get/ContentSite/no/${no}`);
   }
 
-  findAllById(nos:string[]){
-    return this.httpClient.post(`${this.baseUrl}/get/ContentSiteList/nos`,nos);
+  findAllById(nos:number[]){
+    return this.httpClient.post<ContentSite[]>(`${this.baseUrl}/get/ContentSiteList/nos`,nos);
   }
 }
