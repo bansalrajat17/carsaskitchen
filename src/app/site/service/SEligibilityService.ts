@@ -5,13 +5,13 @@ import { SEligibility } from '../orm/SEligibility';
 @Injectable({
   providedIn: 'root'
 })
-export class SsEligibilityService {
+export class SEligibilityService {
 
   private baseUrl = "http://localhost:8080";
 
   constructor(private httpClient: HttpClient) { }
 
-  findByServiceId(serviceId:string) {
-    return this.httpClient.get<SEligibility[]>(`${this.baseUrl}/get/SEligibilityList/ServiceId/${serviceId}`);
+  findByServiceNo(serviceNo:number) {
+    return this.httpClient.get<SEligibility[]>(`${this.baseUrl}/get/SEligibilityList/ServiceNo/${serviceNo}`);
   }
 }

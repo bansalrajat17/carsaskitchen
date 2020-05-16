@@ -1,14 +1,15 @@
-import { AuditParameters } from "../../webapp/orm/AuditParameters";
+import { Site } from "../../site/orm/Site";
 
-export class ContentSite extends AuditParameters {
-    constructor(public contentNo: string,
-        public contentHead: string,
-        public contentDesc: string,
+export class ContentSite extends Site {
+    constructor(public no: number,
+        public name: string,
+        public head: string,
+        public description: string,
         createdDate: Date,
         modifiedDate: Date,
         createdBy: string,
         modifiedBy: string) {
-        super(createdDate,
+        super(no,name,head,description,createdDate,
             modifiedDate,
             createdBy,
             modifiedBy);

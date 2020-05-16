@@ -15,7 +15,7 @@ export class ItrComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.serviceSiteService.findById(this.activatedRoute.snapshot.paramMap.get('id')
+    this.serviceSiteService.findById(+this.activatedRoute.snapshot.paramMap.get('id')
     ).subscribe(data => this.serviceSite = data);
   }
 }

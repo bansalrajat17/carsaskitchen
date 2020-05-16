@@ -11,7 +11,7 @@ export class ServiceSiteService {
 
   constructor(private httpClient: HttpClient) { }
 
-  findById(serviceId: string): Observable<Object> {
-    return this.httpClient.get(`${this.baseUrl}/get/ServiceSite/${serviceId}`);
+  findById(no: number) {
+    return this.httpClient.get(`${this.baseUrl}/get/ServiceSite/no/${no}`);
   }
 }

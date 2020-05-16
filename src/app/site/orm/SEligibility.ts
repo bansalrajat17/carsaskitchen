@@ -1,14 +1,18 @@
-import { AuditParameters } from "../../webapp/orm/AuditParameters";
-import { ServiceSite } from './ServiceSite';
+import { SsEligibility } from './SsEligibility';
+import { Site } from "./Site";
 
-export class SEligibility extends AuditParameters {
-    constructor(public eligibilityId: number,
-        public eligibilityDesc: string, public icon: string, public serviceSiteList: ServiceSite[],
+
+export class SEligibility extends Site {
+    constructor(public no: number,
+        public name: string,
+        public head: string,
+        public description: string, public ssEligibilityList
+            : SsEligibility[],
         createdDate: Date,
         modifiedDate: Date,
         createdBy: string,
         modifiedBy: string) {
-        super(createdDate,
+        super(no, name, head, description, createdDate,
             modifiedDate,
             createdBy,
             modifiedBy);
