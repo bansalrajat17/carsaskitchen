@@ -8,12 +8,13 @@ import { ContentSite } from '../../orm/ContentSite';
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit {
-  private contentSite:any;
-  constructor(private contentSiteService:ContentSiteService) { 
-    contentSiteService.findById("1").subscribe(data => this.contentSite = data );
+  private contentSiteArray: ContentSite[];
+  constructor(private contentSiteService: ContentSiteService) {
+
   }
 
   ngOnInit() {
+    this.contentSiteService.findAllById([1, 2, 3]).subscribe(data => this.contentSiteArray = data);
   }
 
 }
