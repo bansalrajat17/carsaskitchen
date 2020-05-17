@@ -90,11 +90,27 @@
   }
   
   /* Nav Meu Styling */
-  .nav-menu a {
+  .btn-link{
+    padding: 1px 8px 10px 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    outline: none;
+  }
+
+  .btn-link:hover{
+    color: #18d26e;
+  }
+
+   .nav-menu a {
     padding: 0 8px 10px 8px;
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 13px;
@@ -137,6 +153,8 @@
   .nav-menu ul ul {
     margin: 0;
   }
+
+ 
   
   /* Mobile Nav Toggle */
 

@@ -7,14 +7,16 @@
         <div class="media-body">
             <div class="overview">
                 <div class="name"><b>{{sTestimonial?.givenBy}}</b></div>
-                <div class="details">{{sTestimonial?.designation}}</div>
+                <div class="details">{{sTestimonial?.designation}} </div>
                 <div class="star-rating">
                     <ul class="list-inline">
+                        <li class="list-inline-item" ng-repeat="x in [] | limitTo:sTestimonial?.rating"><i class="fa fa-star"></i>
+                        </li>
+                        <!--li class="list-inline-item"><i class="fa fa-star"></i></li>
                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li-->
                     </ul>
                 </div>
             </div>

@@ -10,7 +10,7 @@ import { STestimonial } from 'src/app/site/orm/STestimonial';
 export class MonoTestimonialComponent implements OnInit {
 
   private sTestimonialArray: Array<STestimonial> = [];
-  private defaultImagePath = "../../../";
+  private defaultImagePath = "../../../../../assets/images/testimonial/";
 
   constructor(private sTestimonialService: STestimonialService) { }
 

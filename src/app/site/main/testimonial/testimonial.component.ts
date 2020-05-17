@@ -9,7 +9,7 @@ import { STestimonialService } from '../../service/STestimonialService';
 export class TestimonialComponent implements OnInit {
 
   
-  constructor(private sTestimonialService: STestimonialService) { }
+  constructor() { }
 
   ngOnInit() {
   }

@@ -21,7 +21,6 @@ import { FooterComponent } from './site/main/footer/footer.component';
 import { GetstartedFormComponent } from './site/main/getstarted-form/getstarted-form.component';
 import { GstComponent } from './site/main/gst/gst.component';
 import { HeaderComponent } from './site/main/header/header.component';
-import { HomeStatsComponent } from './site/main/home-stats/home-stats.component';
 import { HomeComponent } from './site/main/home/home.component';
 import { ItrComponent } from './site/main/itr/itr.component';
 import { MainComponent } from './site/main/main.component';
@@ -43,6 +42,7 @@ import { InformationComponent } from '../app/site/main/information/information.c
 import { InfoTabComponent } from '../app/site/main/info-tab/info-tab.component';
 import { TestimonialComponent } from './site/main/testimonial/testimonial.component';
 import { MonoTestimonialComponent } from './site/main/testimonial/mono-testimonial/mono-testimonial.component';
+import { HowitworksComponent } from './site/main/howitworks/howitworks.component';
 
 
 const appRoute: Routes = 
@@ -87,7 +87,6 @@ const appRoute: Routes =
     ItrComponent,
     GstComponent,
     ComplianceComponent,
-    HomeStatsComponent,
     AccountComponent,
     AboutUsComponent,
     LoginComponent,
@@ -105,7 +104,8 @@ const appRoute: Routes =
     InformationComponent,
     InfoTabComponent,
     TestimonialComponent,
-    MonoTestimonialComponent
+    MonoTestimonialComponent,
+    HowitworksComponent
   ],
   entryComponents: [AccountComponent],
   imports: [

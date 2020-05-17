@@ -1,9 +1,5 @@
 <nav id="nav-menu-container">
     <ul class="nav-menu">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <!--li><a href="#portfolio">Portfolio</a></li-->
-        <li><a href="#team">Team</a></li>
         <li class="menu-has-children"><a href="">ITR</a>
             <ul>
                 <li><a routerLink="/itr/1">Income Tax Filing
@@ -49,7 +45,7 @@
             </ul>
         </li>
         <li><a href="#contact">Contact</a></li>
-        <button type="button" title="LOGIN/SIGNUP" id="btnLogin" class="btn btn-outline-success mr-3"
-                    mat-raised-button (click)="openAccount()">LOGIN / SIGN-UP</button>
+        <button type="button" class="btn btn-link" title="LOGIN/SIGNUP" id="btnLogin"
+                    (click)="openAccount()">LOGIN / SIGN-UP</button>
     </ul>
 </nav><!-- #nav-menu-container -->

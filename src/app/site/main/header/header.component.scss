@@ -20,7 +20,8 @@
   }
   
   #header.header-scrolled {
-    background: rgba(0, 0, 0, 0.9);
+    background:rgb(255, 255, 255);
+    //background: rgba(0, 0, 0, 0.9);
     padding: 20px 0;
     height: 72px;
     transition: all 0.5s;
@@ -28,6 +29,11 @@
   
   #header #logo {
     float: left;
+
+  }
+
+  #imgLogo{
+    height:52px;
   }
   
   @media (min-width: 1024px) {
