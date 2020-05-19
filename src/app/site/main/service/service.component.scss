@@ -1,9 +1,35 @@
 @import "../main.component";
 
+.divider {border: 1px solid #ccc;}
+img {width:100%;}
+
+     .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
 /* Services Section
 --------------------------------*/
 
-.img img {
+/*.img img {
   height:280px;
 }
 
@@ -130,7 +156,7 @@ h2::after {
 	border-color: transparent;
 	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
 }
-
+*/
 
 
 

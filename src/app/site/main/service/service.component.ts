@@ -10,6 +10,12 @@ export class ServiceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   }
 
 }

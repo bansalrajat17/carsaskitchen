@@ -49,6 +49,7 @@
     "rxjs": "~6.4.0",
     "superfish": "^1.7.10",
     "sweetalert2": "^9.10.12",
+    "swiper": "^5.4.0",
     "tslib": "^1.10.0",
     "venobox": "^1.8.9",
     "waypoints": "^4.0.1",
