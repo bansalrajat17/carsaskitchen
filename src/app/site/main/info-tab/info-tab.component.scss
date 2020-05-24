@@ -1,162 +1,46 @@
-$boldHeaderColor: #535353;
-$backColor: #dbdbdb;
 
-html {
-    font-family: sans-serif;
-}
+nav > .nav.nav-tabs{
 
-body {
-    padding: 10px 30px;
-}
+  border: none;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
 
-/* === General style ===*/
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
 }
-
-p {
-    font-size: 15px;
-    color: #87878c;
-    line-height: 1.5em;
-}
-h1 {
-    margin: 0;
-    padding: 0;
-}
-h5 {
-    text-align: center;
-    margin: 20px 0;
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 18px 25px;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
 }
 
-.tab-content {
-    background-color: #7952b3;
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+  bottom: -60px;
+  left: -10%;
+  border: 15px solid transparent;
+  border-top-color: #e74c3c ;
+}
+.tab-content{
+  background: #fdfdfd;
+    line-height: 25px;
+    border: 1px solid #ddd;
+    border-top:5px solid #e74c3c;
+    border-bottom:5px solid #e74c3c;
+    padding:30px 25px;
 }
 
-button {
-    padding: 20px;
-    background: #b2b2b2;
-    border: 0 none;
-    color: #fff;
-    font-size: 0.8em;
-    margin: 15px 30%;
-    box-shadow: 0 4px 2px -2px #2b2b2b;
-    border-bottom: 3px solid #767171;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: 0;
-    font-weight: bold;
-    &:hover {
-        background: #beb9b9;
-    }
-    &:active {
-        box-shadow: 0 2px 2px -2px #2b2b2b;
-        border-bottom: 1px solid #767171;
-    }
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    background: #e74c3c;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
 }
-
-.activeTab {
-    background: #fff;
-    box-shadow: inset -6px 0 20px -5px #333;
-}
-
-article {
-    position: relative;
-    margin-top: 1px;
-}
-
-nav {
-    ul {
-        li {
-            float: left;
-            width: 20%;
-            a {
-                display: block;
-                background: $backColor;
-                margin: 0 1px 0 0;
-                padding: 20px;
-                text-decoration: none;
-                color: $boldHeaderColor;
-                font-size: 1.1em;
-                font-weight: bold;
-                &:hover {
-                    background: #fff;
-                }
-            }
-        }
-    }
-}
-
-.navContent {
-    .theContent {
-        overflow: hidden;
-        position: absolute;
-        top: 10px;
-        left: 0;
-        z-index: 0;
-        background: #fff;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        min-height: 250px;
-    }
-    article:first-child div {
-        z-index: 1;
-    }
-    h1 {
-        color: $boldHeaderColor;
-        font-size: 1.2em;
-        margin-top: 1.8em;
-    }
-}
-
-@media (min-width: 768px) {
-    input[type="checkbox"] {
-        display: none;
-    }
-    .navContent {
-        .theContent {
-            &:target {
-                z-index: 1;
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        display: none;
-    }
-    .theContent {
-        margin-top: 0;
-        max-height: 0;
-        opacity: 0;
-    }
-}
-
-.clear {
-    clear: both;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-}
-
-.clearfix:after {
-    clear: both;
-    content: " ";
-    display: block;
-    font-size: 0;
-    line-height: 0;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-}
-
-* html .clearfix,
-*:first-child + html .clearfix {
-    zoom: 1;
-}
-
-/* ==== Styling the Vertical tab, thiw will be applied just when the container hasing the calss verticalTab ===*/

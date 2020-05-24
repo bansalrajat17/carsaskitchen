@@ -1,6 +1,6 @@
 export class SsDocumentRequiredKey {
 
-    constructor(public serviceNo: number, public docNo: number) {
+    constructor(public serviceNo: number, public documentNo: number) {
 
     }
 }
