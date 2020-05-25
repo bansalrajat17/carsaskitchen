@@ -47,19 +47,19 @@
       </nav>
       <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
         <div
-          class="tab-pane fade show active"
+          class="tab-pane fade jumbotron show active"
           id="nav-home"
           role="tabpanel"
           aria-labelledby="nav-home-tab"
         >
         <ul *ngFor="let ssEligibility of serviceSite?.ssEligibilitySet">
-          <li class="text-white d-flex justify-content-center">
-            <fa-icon [icon]="faCoffee"></fa-icon> {{ ssEligibility.seligibility.description }}
+          <li>
+            <fa-icon [icon]="faCoffee"></fa-icon> {{ ssEligibility?.seligibility?.description }}
           </li>
         </ul>
         </div>
         <div
-          class="tab-pane fade"
+          class="tab-pane fade jumbotron"
           id="nav-profile"
           role="tabpanel"
           aria-labelledby="nav-profile-tab"
@@ -83,21 +83,16 @@
           </tbody>
         </table>  
         </div>
-        <div
-          class="tab-pane fade"
+        <div id="requirements"
+          class="tab-pane fade jumbotron"
           id="nav-contact"
           role="tabpanel"
           aria-labelledby="nav-contact-tab"
         >
-          Et et consectetur ipsum labore excepteur est proident excepteur ad
-          velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt
-          anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit
-          non irure adipisicing aliqua ullamco irure incididunt irure non esse
-          consectetur nostrud minim non minim occaecat. Amet duis do nisi duis
-          veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui
-          sit. Exercitation mollit sit culpa nisi culpa non adipisicing
-          reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad
-          duis occaecat ex.
+          <ul *ngFor="let ssDocumentRequired of serviceSite?.ssDocumentRequiredList">
+            <li>
+              {{ ssDocumentRequired?.sdocumentRequired?.name }}</li>
+          </ul>
         </div>
         <div
           class="tab-pane fade"
