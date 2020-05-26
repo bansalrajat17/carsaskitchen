@@ -4,6 +4,7 @@ import { ServiceSiteService } from '../../service/ServiceSiteService';
 import { SsGstTypeService } from '../../service/SsGstTypeService';
 import { ActivatedRoute, Router } from '@angular/router';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { ServiceSite } from '../../orm/ServiceSite';
 //import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 
 
@@ -15,7 +16,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 export class InfoTabComponent implements OnInit {
 
-  private serviceSite: any;
+  private serviceSite: ServiceSite;
   private banners = ["assets/images/banners/gst_banner_4.jpeg", "assets/images/banners/gst_banner_2"];
   private ssGstTypeArray: Array<SsGstType> = [];
   private faCoffee = faCoffee;
@@ -24,7 +25,18 @@ export class InfoTabComponent implements OnInit {
 
   ngOnInit() {
     this.serviceSiteService.findById(+this.activatedRoute.snapshot.paramMap.get('id')
-    ).subscribe(data => this.serviceSite = data);
+    ).subscribe(data => {
+      this.serviceSite = data;
+      let ssDocumentRequiredListDb = this.serviceSite.ssDocumentRequiredList;
+      this.serviceSite.ssDocumentRequiredList.clear;
+      for (let index = 0; index < ssDocumentRequiredListDb.size; index++) {
+        if(index%2 == 0){
+          this.serviceSite.ssDocumentRequiredList.add(ssDocumentRequiredListDb[index]);  
+          console.log(this.serviceSite.ssDocumentRequiredList);
+        }  
+      }
+      this.serviceSite.ssDocumentRequiredList.forEach(ssDocumentRequired=>console.log('fgdgfd'+JSON.stringify(ssDocumentRequired)));
+    });
     this.ssGstTypeService.findAll().subscribe(data => {
       this.ssGstTypeArray = data;
     });
