@@ -25,18 +25,7 @@ export class InfoTabComponent implements OnInit {
 
   ngOnInit() {
     this.serviceSiteService.findById(+this.activatedRoute.snapshot.paramMap.get('id')
-    ).subscribe(data => {
-      this.serviceSite = data;
-      let ssDocumentRequiredListDb = this.serviceSite.ssDocumentRequiredList;
-      this.serviceSite.ssDocumentRequiredList.clear;
-      for (let index = 0; index < ssDocumentRequiredListDb.size; index++) {
-        if(index%2 == 0){
-          this.serviceSite.ssDocumentRequiredList.add(ssDocumentRequiredListDb[index]);  
-          console.log(this.serviceSite.ssDocumentRequiredList);
-        }  
-      }
-      this.serviceSite.ssDocumentRequiredList.forEach(ssDocumentRequired=>console.log('fgdgfd'+JSON.stringify(ssDocumentRequired)));
-    });
+    ).subscribe(data => this.serviceSite = data);
     this.ssGstTypeService.findAll().subscribe(data => {
       this.ssGstTypeArray = data;
     });

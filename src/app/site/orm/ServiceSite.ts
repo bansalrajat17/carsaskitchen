@@ -7,7 +7,7 @@ export class ServiceSite extends Site {
     constructor(no: number,
         name: string,
         head: string,
-        description: string, public ssEligibilitySet: Set<SsEligibility>,public ssDocumentRequiredList: Set<SsDocumentRequired>,public ssBenefitSet: Set<SsBenefit>, createdDate: Date,
+        description: string, public ssEligibilityList: SsEligibility[],public ssDocumentRequiredList: SsDocumentRequired[],public ssBenefitList: SsBenefit[], createdDate: Date,
         modifiedDate: Date,
         createdBy: string,
         modifiedBy: string) {
