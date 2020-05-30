@@ -1,4 +1,50 @@
-<div class="container" id="getStartedFormDiv">
+<div class="container-contact2">
+  <div class="wrap-contact2">
+    <form class="contact2-form validate-form">
+      <span class="contact2-form-title">
+        Contact Us
+      </span>
+      <div class="wrap-input2 validate-input" data-validate="Name is required">
+        <input
+          class="input2"
+          type="text"
+          name="name"
+          [(ngModel)]="requestQueue.name"
+        />
+        <span class="focus-input2" data-placeholder="NAME"></span>
+      </div>
+      <div
+        class="wrap-input2 validate-input"
+        data-validate="Valid email is required: ex@abc.xyz"
+      >
+        <input
+          class="input2"
+          type="text"
+          name="email"
+          [(ngModel)]="requestQueue.email"
+        />
+        <span class="focus-input2" data-placeholder="EMAIL"></span>
+      </div>
+      <div
+        class="wrap-input2 validate-input"
+        data-validate="Valid email is required: ex@abc.xyz"
+      >
+        <input
+          class="input2"
+          type="text"
+          name="phone"
+          [(ngModel)]="requestQueue.phone"
+        />
+        <span class="focus-input2" data-placeholder="PHONE"></span>
+      </div><br>
+      <div class="wrap-contact2-form-btn">
+        <input type="button" value="GET STARTED" mat-raised-button (click)="saveRequestQueue()" class="btn-block btn-primary"> 
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--div class="container" id="getStartedFormDiv">
     <form>
         <mat-form-field appearance="fill">
             <mat-label>NAME</mat-label>
@@ -14,4 +60,4 @@
         </mat-form-field><br>
         <button mat-raised-button (click)="saveRequestQueue()" class="btn btn-primary">GET STARTED</button>
     </form>
-</div>
+</div-->

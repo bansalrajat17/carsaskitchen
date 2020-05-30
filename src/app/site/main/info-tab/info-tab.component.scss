@@ -1,11 +1,8 @@
-
 nav > .nav.nav-tabs{
-
   border: none;
     color:#fff;
     background:#272e38;
     border-radius:0;
-
 }
 nav > div a.nav-item.nav-link,
 nav > div a.nav-item.nav-link.active
@@ -24,14 +21,14 @@ nav > div a.nav-item.nav-link.active:after
   bottom: -60px;
   left: -10%;
   border: 15px solid transparent;
-  border-top-color: #e74c3c ;
+  border-top-color:rgba(213, 0, 125, 0.8);
 }
 .tab-content{
   background: #fdfdfd;
     line-height: 25px;
     border: 1px solid #ddd;
-    border-top:5px solid #e74c3c;
-    border-bottom:5px solid #e74c3c;
+    border-top:5px solid rgba(213, 0, 125, 0.8);
+    border-bottom:5px solid rgba(213, 0, 125, 0.8);
     padding:30px 25px;
 }
 
@@ -39,7 +36,7 @@ nav > div a.nav-item.nav-link:hover,
 nav > div a.nav-item.nav-link:focus
 {
   border: none;
-    background: #e74c3c;
+    background: rgba(213, 0, 125, 0.8);
     color:#fff;
     border-radius:0;
     transition:background 0.20s linear;

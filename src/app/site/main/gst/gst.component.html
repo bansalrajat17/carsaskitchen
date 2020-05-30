@@ -1,23 +1,128 @@
-<br>
+<br />
 <section id="about">
-    <div class="container">
-        <div class="row wow fadeInUp">
-            <img src="./../../../../assets/images/banners/gst_banner_4.jpeg" class="img-responsive" />
-        </div>
-        <header class="section-header">
-            <h3>GST RETURN</h3>
-            <p><mark>{{ serviceSite?.head }}</mark> {{ serviceSite?.description }}</p>
-            <div class="d-flex justify-content-center"><button mat-button class="btn btn-success">FILE YOUR
-                GST RETURN NOW @799</button></div>
-        </header><br><br>
+  <div class="container">
+    <div class="row wow fadeInUp">
+      <img
+        src="./../../../../assets/images/banners/gst_banner_4.jpeg"
+        class="img-responsive"
+      />
     </div>
-</section><!-- End About Us Section -->
+    <header class="section-header">
+      <h3>GST RETURN</h3>
+      <br />
+      <div class="row" style="background-color: white;">
+        <div class="col-md-6">
+          <p>
+            <mark>{{ serviceSite?.head }}</mark> {{ serviceSite?.description }}
+          </p>
+          <!-- Nav tabs -->
+          <div>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#basic"
+                  >BASIC</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#standard"
+                  >STANDARD</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#premium"
+                  >PREMIUM</a
+                >
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <br />
+              <div class="tab-pane container active" id="basic">
+                Completely managed GST registration service until obtaining
+                GSTIN with Expert Support and 1 year LEDGERS accounting
+                software. Inclusive of all government fee and taxes.
+                <br /><br />
+                <div class="d-flex justify-content-center">
+                  <button mat-button class="btn btn-primary">
+                    FILE YOUR GST RETURN NOW @799
+                  </button>
+                </div>
+              </div>
+              <div class="tab-pane container fade" id="standard">
+                Completely managed GST registration service and GST return
+                filing service for 3 months with Expert Support and 1 year
+                LEDGERS accounting software. Inclusive of all government fee and
+                taxes.vernment fee and taxes.
+                <br /><br />
+                <div class="d-flex justify-content-center">
+                  <button mat-button class="btn btn-primary">
+                    FILE YOUR GST RETURN NOW @3899
+                  </button>
+                </div>
+              </div>
+              <div class="tab-pane container fade" id="premium">
+                Completely managed GST registration service and GST return
+                filing service for 6 months with Expert Support and 1 year
+                LEDGERS accounting software. Inclusive of all government fee and
+                taxes. software. Inclusive of all government fee and taxes.
+                <br /><br />
+                <div class="d-flex justify-content-center">
+                  <button mat-button class="btn btn-primary">
+                    FILE YOUR GST RETURN NOW @5899
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <app-getstarted-form></app-getstarted-form>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <!--div class="d-flex justify-content-center">
+        <button mat-button class="btn btn-success">
+          FILE YOUR GST RETURN NOW @799
+        </button>
+      </div-->
+    </header>
+    <br /><br />
+  </div>
+</section>
+<!-- End About Us Section -->
 <section class="wow fadeInUp" data-wow-delay="0.7s">
-    <app-info-tab></app-info-tab>
+  <app-info-tab></app-info-tab>
 </section>
-<br>
+<br />
 <app-action></app-action>
-<section id="testimonial">
-    <app-testimonial></app-testimonial>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" style="background-color: white;">
+        <h4>WHY RETURN FILING ?</h4>
+        <ul>
+          <li>
+            A Team of Experienced GST Professionals
+          </li>
+          <li>
+            Accurate Collection to reduce Tax
+          </li>
+          <li>
+            Human Assistance over Call
+          </li>
+          <li>
+            100 % Data Security
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6" id="testimonial">
+        <app-mono-testimonial></app-mono-testimonial>
+        <!--app-testimonial></app-testimonial-->
+      </div>
+    </div>
+  </div>
 </section>
-<br>
+<br />
