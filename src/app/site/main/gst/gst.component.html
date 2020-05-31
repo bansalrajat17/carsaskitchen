@@ -1,12 +1,13 @@
 <br />
 <section id="about">
+  <br>
+  <div class="row container-fluid">
+    <img
+      src="./../../../../assets/images/banners/gst_banner_4.jpeg" width="100%" height="0"
+      
+    />
+  </div>
   <div class="container">
-    <div class="row wow fadeInUp">
-      <img
-        src="./../../../../assets/images/banners/gst_banner_4.jpeg"
-        class="img-responsive"
-      />
-    </div>
     <header class="section-header">
       <h3>GST RETURN</h3>
       <br />
@@ -44,7 +45,7 @@
                 software. Inclusive of all government fee and taxes.
                 <br /><br />
                 <div class="d-flex justify-content-center">
-                  <button mat-button class="btn btn-primary">
+                  <button mat-button class="btn btn-primary" (click)="focusGetStartedForm()">
                     FILE YOUR GST RETURN NOW @799
                   </button>
                 </div>
@@ -56,7 +57,7 @@
                 taxes.vernment fee and taxes.
                 <br /><br />
                 <div class="d-flex justify-content-center">
-                  <button mat-button class="btn btn-primary">
+                  <button mat-button class="btn btn-primary" (click)="focusGetStartedForm()">
                     FILE YOUR GST RETURN NOW @3899
                   </button>
                 </div>
@@ -68,7 +69,7 @@
                 taxes. software. Inclusive of all government fee and taxes.
                 <br /><br />
                 <div class="d-flex justify-content-center">
-                  <button mat-button class="btn btn-primary">
+                  <button mat-button class="btn btn-primary" (click)="focusGetStartedForm()">
                     FILE YOUR GST RETURN NOW @5899
                   </button>
                 </div>
@@ -97,12 +98,12 @@
   <app-info-tab></app-info-tab>
 </section>
 <br />
-<app-action></app-action>
+<!--app-action></app-action-->
 <section>
   <div class="container">
     <div class="row">
       <div class="col-md-6" style="background-color: white;">
-        <h4>WHY RETURN FILING ?</h4>
+        <h4>WHY RETURN FILING ?</h4><br>
         <ul>
           <li>
             A Team of Experienced GST Professionals

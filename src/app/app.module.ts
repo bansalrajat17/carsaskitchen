@@ -43,6 +43,7 @@ import { InfoTabComponent } from '../app/site/main/info-tab/info-tab.component';
 import { TestimonialComponent } from './site/main/testimonial/testimonial.component';
 import { MonoTestimonialComponent } from './site/main/testimonial/mono-testimonial/mono-testimonial.component';
 import { HowitworksComponent } from './site/main/howitworks/howitworks.component';
+import { LoginSignupComponent } from './shared/auth/login-signup/login-signup.component';
 
 
 const appRoute: Routes = 
@@ -105,7 +106,8 @@ const appRoute: Routes =
     InfoTabComponent,
     TestimonialComponent,
     MonoTestimonialComponent,
-    HowitworksComponent
+    HowitworksComponent,
+    LoginSignupComponent
   ],
   entryComponents: [AccountComponent],
   imports: [

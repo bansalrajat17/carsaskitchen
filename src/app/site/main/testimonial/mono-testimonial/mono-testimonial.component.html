@@ -17,9 +17,44 @@
           ></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-
         </ol>
         <div class="carousel-inner mt-4">
+          <!--div>
+            <div class="carousel-item text-center active">
+              <div class="img-box p-1 border rounded-circle m-auto">
+                <img
+                  class="d-block w-100 rounded-circle"
+                  [src]="defaultImagePath.concat(sTestimonial?.logo)"
+                  alt="First slide"
+                />
+              </div>
+              <h5 class="mt-4 mb-0">
+                <strong class="text-warning text-uppercase">PCC</strong>
+              </h5>
+              <h6 class="text-dark m-0">OWNER</h6>
+              <p class="m-0 pt-3">
+                fgfgjhgjhggjhgjhgjhgjhg jjhgjhgjhgjhgjhgv jhghjgjhgkjhk
+                jhghjkhjkhkjh
+              </p>
+            </div>
+            <div class="carousel-item text-center">
+              <div class="img-box p-1 border rounded-circle m-auto">
+                <img
+                  class="d-block w-100 rounded-circle"
+                  [src]="defaultImagePath.concat(sTestimonial?.logo)"
+                  alt="First slide"
+                />
+              </div>
+              <h5 class="mt-4 mb-0">
+                <strong class="text-warning text-uppercase">PCC</strong>
+              </h5>
+              <h6 class="text-dark m-0">OWNER</h6>
+              <p class="m-0 pt-3">
+                fgfgjhgjhggjhgjhgjhgjhg jjhgjhgjhgjhgjhgv jhghjgjhgkjhk
+                jhghjkhjkhkjh
+              </p>
+            </div>
+          </div-->
           <div *ngFor="let sTestimonial of sTestimonialArray;let i = index">
             <div class="(i == 0)?'carousel-item text-center active':'carousel-item text-center'">
               <div class="img-box p-1 border rounded-circle m-auto">

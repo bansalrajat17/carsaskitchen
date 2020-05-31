@@ -29,4 +29,8 @@ export class GstComponent implements OnInit {
 
   }
 
+  focusGetStartedForm(){
+    $("#txtName").focus();
+  }
+
 }
