@@ -1,95 +1,81 @@
 <br />
 <section id="about">
-  <br>
+  <br />
   <div class="row container-fluid">
     <img
-      src="./../../../../assets/images/banners/gst_banner_4.jpeg" width="100%" height="0"
-      
+      src="./../../../../assets/images/banners/gst_banner_4.jpeg"
+      width="100%"
+      height="0"
     />
   </div>
   <div class="container">
     <header class="section-header">
       <h3>GST RETURN</h3>
-      <br />
-      <div class="row" style="background-color: white;">
-        <div class="col-md-6">
-          <p>
-            <mark>{{ serviceSite?.head }}</mark> {{ serviceSite?.description }}
-          </p>
-          <!-- Nav tabs -->
-          <div>
-            <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#basic"
-                  >BASIC</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#standard"
-                  >STANDARD</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#premium"
-                  >PREMIUM</a
-                >
-              </li>
-            </ul>
+    </header>
+    <br />
+    <div class="row" style="background-color: white;">
+      <div class="col-md-6">
+        <p>
+          <mark>{{ serviceSite?.head }}</mark> {{ serviceSite?.description }}
+        </p>
+        <div>
+          <ul class="nav nav-tabs">
+            <li
+              class="nav-item"
+              *ngFor="
+                let ssPackage of serviceSite?.ssPackageList;
+                let i = index
+              "
+            >
+              <a
+                [ngClass]="i == 0 ? 'nav-link active' : 'nav-link'"
+                data-toggle="tab"
+                [href]="'#' + ssPackage?.spackage?.name | lowercase"
+                >{{ ssPackage?.spackage?.name }}</a
+              >
+            </li>
+          </ul>
 
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <br />
-              <div class="tab-pane container active" id="basic">
-                Completely managed GST registration service until obtaining
-                GSTIN with Expert Support and 1 year LEDGERS accounting
-                software. Inclusive of all government fee and taxes.
-                <br /><br />
-                <div class="d-flex justify-content-center">
-                  <button mat-button class="btn btn-primary" (click)="focusGetStartedForm()">
-                    FILE YOUR GST RETURN NOW @799
-                  </button>
-                </div>
-              </div>
-              <div class="tab-pane container fade" id="standard">
-                Completely managed GST registration service and GST return
-                filing service for 3 months with Expert Support and 1 year
-                LEDGERS accounting software. Inclusive of all government fee and
-                taxes.vernment fee and taxes.
-                <br /><br />
-                <div class="d-flex justify-content-center">
-                  <button mat-button class="btn btn-primary" (click)="focusGetStartedForm()">
-                    FILE YOUR GST RETURN NOW @3899
-                  </button>
-                </div>
-              </div>
-              <div class="tab-pane container fade" id="premium">
-                Completely managed GST registration service and GST return
-                filing service for 6 months with Expert Support and 1 year
-                LEDGERS accounting software. Inclusive of all government fee and
-                taxes. software. Inclusive of all government fee and taxes.
-                <br /><br />
-                <div class="d-flex justify-content-center">
-                  <button mat-button class="btn btn-primary" (click)="focusGetStartedForm()">
-                    FILE YOUR GST RETURN NOW @5899
-                  </button>
-                </div>
+          <!-- Tab panes -->
+
+          <div class="tab-content">
+            <br />
+            <div
+              *ngFor="
+                let ssPackage of serviceSite?.ssPackageList;
+                let i = index
+              "
+              [ngClass]="
+                i == 0 ? 'tab-pane container active' : 'tab-pane container'
+              "
+              [id]="ssPackage?.spackage?.name | lowercase"
+            >
+              {{ ssPackage?.spackage?.description }}
+
+              <br /><br />
+              <div class="d-flex justify-content-center">
+                <button
+                  mat-button
+                  class="btn btn-primary"
+                  (click)="openAccount()"
+                >
+                  {{
+                    "FILE YOUR GST RETURN NOW @" + ssPackage?.spackage?.amount
+                  }}
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <app-getstarted-form></app-getstarted-form>
-        </div>
       </div>
-      <br />
-      <hr />
-      <br />
-      <!--div class="d-flex justify-content-center">
-        <button mat-button class="btn btn-success">
-          FILE YOUR GST RETURN NOW @799
-        </button>
-      </div-->
-    </header>
+      <div class="col-md-6">
+        <app-getstarted-form></app-getstarted-form>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+
     <br /><br />
   </div>
 </section>
@@ -103,7 +89,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6" style="background-color: white;">
-        <h4>WHY RETURN FILING ?</h4><br>
+        <h4>WHY RETURN FILING ?</h4>
+        <br />
         <ul>
           <li>
             A Team of Experienced GST Professionals
@@ -121,9 +108,15 @@
       </div>
       <div class="col-md-6" id="testimonial">
         <app-mono-testimonial></app-mono-testimonial>
-        <!--app-testimonial></app-testimonial-->
       </div>
     </div>
   </div>
+</section>
+<section>
+  <header class="section-header">
+    <h3>OUR PACKAGES</h3>
+  </header>
+  <br />
+  <app-packages></app-packages>
 </section>
 <br />

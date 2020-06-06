@@ -1,0 +1,15 @@
+.container .row .col-md-4 {
+  outline: 1px solid rgba(213, 0, 125, 0.8);
+}
+
+.container-box {
+  background-color: rgba(213, 0, 125, 0.8);
+  height: 100px;
+}
+
+.container-box > ul {
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+

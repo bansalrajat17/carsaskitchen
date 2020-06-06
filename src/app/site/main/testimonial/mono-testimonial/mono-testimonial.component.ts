@@ -13,20 +13,9 @@ export class MonoTestimonialComponent implements OnInit {
 
   constructor(private sTestimonialService: STestimonialService) {}
 
-  chunks(array, size) {
-    let results = [];
-    while (array.length) {
-      results.push(array.splice(0, size));
-    }
-    return results;
-  }
-
   ngOnInit() {
     this.sTestimonialService
       .findAll()
-      .subscribe(
-        (data) =>
-          (this.sTestimonialArray = this.chunks(data, 3))
-      );
+      .subscribe((data) => (this.sTestimonialArray = data));
   }
 }

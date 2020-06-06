@@ -1,97 +1,53 @@
-body{
-	font-family: 'Lato', sans-serif;
+body {
+  font-family: "Lato", sans-serif;
 }
-h4{
-	position: relative;
+h4 {
+  position: relative;
 }
-h4::after{
-	content: "";
-	width: 130px;
-	position: absolute;
-	margin: 0 auto;
-	height: 3px;
-	background: #FFC107;
-	left: 0;
-	right: 0;
-	bottom: -10px;
+h4::after {
+  content: "";
+  width: 130px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: #ffc107;
+  left: 0;
+  right: 0;
+  bottom: -10px;
 }
-.carousel-inner .carousel-item .img-box{
-	width: 135px;
-	height: 135px;
+.carousel-inner .carousel-item .img-box {
+  width: 135px;
+  height: 135px;
 }
-.carousel-control-prev{
-	left: -100px;
+.carousel-control-prev {
+  left: -100px;
 }
-.carousel-control-next{
-	right: -100px;
+.carousel-control-next {
+  right: -100px;
 }
-.carousel-indicators{
-	top: 320px;
+
+.carousel-control-prev-icon {
+  filter: invert(1);
 }
+
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+.carousel-indicators {
+  top: 320px;
+}
+
 @media (min-width: 320px) and (max-width: 640px) {
-	.carousel-inner .carousel-item p{
-		font-size: 14px;
-	}
-	.carousel-control-prev{
-		left: -40px;
-	}
-	.carousel-control-next{
-		right: -40px;
-	}
- 	.carousel-indicators{
-		top: 400px;
-	}
+  .carousel-inner .carousel-item p {
+    font-size: 14px;
+  }
+  .carousel-control-prev {
+    left: -40px;
+  }
+  .carousel-control-next {
+    right: -40px;
+  }
+  .carousel-indicators {
+    top: 400px;
+  }
 }
-/*.star-rating li {
-	padding: 0 2px;
-}
-.star-rating i {
-	font-size: 16px;
-	color: #ffdc12;
-}
-
-.testimonial {
-    color: #808080;
-    position: relative;
-    padding: 16px;
-    background: #f1f1f1;
-    border: 1px solid #efefef;
-    border-radius: 3px;
-	margin-bottom: 15px;
-}
-
-.testimonial::after {
-	content: "";
-	width: 15px;
-	height: 15px;
-	display: block;
-	background: #f1f1f1;
-	border: 1px solid #efefef;
-	border-width: 0 0 1px 1px;
-	position: absolute;
-	bottom: -8px;
-	left: 46px;
-	transform: rotateZ(-46deg);
-}
-
-.media {
-	position: relative;
-	padding: 0 0 0 20px;
-}
-.media img {
-	width: 75px;
-	height: 75px;
-	display: block;
-	border-radius: 50%;
-}
-
-.overview {
-	padding: 3px 0 0 15px;
-}
-.overview .details {
-	padding: 5px 0 8px;
-}
-.overview b {
-	text-transform: uppercase;
-	color: #1abc9c;
-}*/
