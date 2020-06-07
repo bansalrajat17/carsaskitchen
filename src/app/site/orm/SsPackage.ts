@@ -1,11 +1,11 @@
 import { ServiceSite } from "./ServiceSite";
-import { SPackage } from "./SPackage";
+import { SPackageDetail } from "./SPackageDetail";
 import { SsPackageKey } from "./SsPackageKey";
 
 export class SsPackage {
   constructor(
     public ssPackageKey: SsPackageKey,
-    public sPackage: SPackage,
+    public sPackageDetail: SPackageDetail,
     public serviceSite: ServiceSite
   ) {}
 }

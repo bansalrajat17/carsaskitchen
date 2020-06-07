@@ -1,28 +1,19 @@
 import { SsPackage } from "./SsPackage";
-import { Site } from "./Site";
+import { AuditParameters } from "../../webapp/orm/AuditParameters";
+import { PpHighlight } from "./PpHighlight";
 
-export class SPackage extends Site {
+export class SPackageDetail extends AuditParameters {
   constructor(
     public no: number,
-    public name: string,
-    public head: string,
     public description: string,
     public amount: number,
     public ssPackageSet: SsPackage[],
+    public ppHighlightList: PpHighlight[],
     createdDate: Date,
     modifiedDate: Date,
     createdBy: string,
     modifiedBy: string
   ) {
-    super(
-      no,
-      name,
-      head,
-      description,
-      createdDate,
-      modifiedDate,
-      createdBy,
-      modifiedBy
-    );
+    super(createdDate, modifiedDate, createdBy, modifiedBy);
   }
 }
