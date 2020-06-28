@@ -1,0 +1,11 @@
+<div class="card-header misc-panel">
+  <h6 class="h6 text-white">{{ contentSite?.name }}</h6>
+</div>
+<div class="card-body">
+  <br />
+  <ul>
+    <li *ngFor="let csCp of contentSite?.csCpList">
+      {{ csCp?.contentPoint?.description }}
+    </li>
+  </ul>
+</div>

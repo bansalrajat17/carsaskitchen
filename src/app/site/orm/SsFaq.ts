@@ -1,12 +1,15 @@
+import { SEligibility } from "./SEligibility";
 import { ServiceSite } from "./ServiceSite";
-import { SPackageDetail } from "./SPackageDetail";
-import { SsPackageKey } from "./SsPackageKey";
+import { SsFaqKey } from "./SsFaqKey";
+import { SQuestion } from "./SQuestion";
+import { SAnswer } from "./SAnswer";
 import { AuditParameters } from 'src/app/webapp/orm/AuditParameters';
 
-export class SsPackage extends AuditParameters {
+export class SsFaq extends AuditParameters{
   constructor(
-    public ssPackageKey: SsPackageKey,
-    public sPackageDetail: SPackageDetail,
+    public ssFaqKey: SsFaqKey,
+    public sQuestion: SQuestion,
+    public sAnswer: SAnswer,
     public serviceSite: ServiceSite,
     createdDate: Date,
     modifiedDate: Date,

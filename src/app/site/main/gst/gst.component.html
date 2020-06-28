@@ -10,7 +10,7 @@
   </div>
   <div class="container">
     <header class="section-header">
-      <h3>GST RETURN</h3>
+      <h3>{{ serviceSite?.name | uppercase }}</h3>
     </header>
     <br />
     <div class="row" style="background-color: white;">
@@ -30,8 +30,15 @@
               <a
                 [ngClass]="i == 0 ? 'nav-link active' : 'nav-link'"
                 data-toggle="tab"
-                [href]="'#' + ssPackage?.spackage?.name | lowercase"
-                >{{ ssPackage?.spackage?.name }}</a
+                [href]="
+                  '#' +
+                    (ssPackage?.spackageDetail?.pmpdPackageList)[0]
+                      ?.spackageMaster?.name | lowercase
+                "
+                >{{
+                  (ssPackage?.spackageDetail?.pmpdPackageList)[0]
+                    ?.spackageMaster?.name
+                }}</a
               >
             </li>
           </ul>
@@ -48,9 +55,12 @@
               [ngClass]="
                 i == 0 ? 'tab-pane container active' : 'tab-pane container'
               "
-              [id]="ssPackage?.spackage?.name | lowercase"
+              [id]="
+                (ssPackage?.spackageDetail?.pmpdPackageList)[0]?.spackageMaster
+                  ?.name | lowercase
+              "
             >
-              {{ ssPackage?.spackage?.description }}
+              {{ ssPackage?.spackageDetail?.description }}
 
               <br /><br />
               <div class="d-flex justify-content-center">
@@ -60,7 +70,8 @@
                   (click)="openAccount()"
                 >
                   {{
-                    "FILE YOUR GST RETURN NOW @" + ssPackage?.spackage?.amount
+                    "FILE YOUR GST RETURN NOW @" +
+                      ssPackage?.spackageDetail?.amount
                   }}
                 </button>
               </div>
@@ -81,30 +92,15 @@
 </section>
 <!-- End About Us Section -->
 <section class="wow fadeInUp" data-wow-delay="0.7s">
-  <app-info-tab></app-info-tab>
+  <app-info-tab [serviceSite]="serviceSite"></app-info-tab>
 </section>
 <br />
 <!--app-action></app-action-->
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-md-6" style="background-color: white;">
-        <h4>WHY RETURN FILING ?</h4>
-        <br />
-        <ul>
-          <li>
-            A Team of Experienced GST Professionals
-          </li>
-          <li>
-            Accurate Collection to reduce Tax
-          </li>
-          <li>
-            Human Assistance over Call
-          </li>
-          <li>
-            100 % Data Security
-          </li>
-        </ul>
+      <div class="card col-md-6" style="background-color: white;">
+        <app-whyrf></app-whyrf>
       </div>
       <div class="col-md-6" id="testimonial">
         <app-mono-testimonial></app-mono-testimonial>
@@ -117,6 +113,9 @@
     <h3>OUR PACKAGES</h3>
   </header>
   <br />
-  <app-packages></app-packages>
+  <app-packages
+    [ssPackageList]="serviceSite?.ssPackageList"
+    [name]="serviceSite?.name"
+  ></app-packages>
 </section>
 <br />

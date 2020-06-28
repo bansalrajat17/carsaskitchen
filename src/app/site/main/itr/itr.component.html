@@ -1,16 +1,334 @@
-<br><br><br><br><br><br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">{{ serviceSite?.serviceIntro }}</div>
-        <div class="card col-md-3">
-            <h2 class="h2">PENALTY</h2>
-            <hr>
+<br />
+<section id="about">
+  <br />
+  <div class="row container-fluid">
+    <img
+      src="./../../../../assets/images/banners/gst_banner_4.jpeg"
+      width="100%"
+      height="0"
+    />
+  </div>
+  <div class="container">
+    <header class="section-header">
+      <h3>{{ serviceSite?.name | uppercase }}</h3>
+    </header>
+    <br />
+    <div class="row" style="background-color: white;">
+      <div class="col-md-6">
+        <p>
+          <mark>{{ serviceSite?.head }}</mark> {{ serviceSite?.description }}
+        </p>
+        <div>
+          <ul class="nav nav-tabs">
+            <li
+              class="nav-item"
+              *ngFor="
+                let ssPackage of serviceSite?.ssPackageList;
+                let i = index
+              "
+            >
+              <a
+                [ngClass]="i == 0 ? 'nav-link active' : 'nav-link'"
+                data-toggle="tab"
+                [href]="
+                  '#' +
+                    (ssPackage?.spackageDetail?.pmpdPackageList)[0]
+                      ?.spackageMaster?.name | lowercase
+                "
+                >{{
+                  (ssPackage?.spackageDetail?.pmpdPackageList)[0]
+                    ?.spackageMaster?.name
+                }}</a
+              >
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+
+          <div class="tab-content">
+            <br />
+            <div
+              *ngFor="
+                let ssPackage of serviceSite?.ssPackageList;
+                let i = index
+              "
+              [ngClass]="
+                i == 0 ? 'tab-pane container active' : 'tab-pane container'
+              "
+              [id]="
+                (ssPackage?.spackageDetail?.pmpdPackageList)[0]?.spackageMaster
+                  ?.name | lowercase
+              "
+            >
+              {{ ssPackage?.spackageDetail?.description }}
+
+              <br /><br />
+              <div class="d-flex justify-content-center">
+                <button
+                  mat-button
+                  class="btn btn-primary"
+                  (click)="openAccount()"
+                >
+                  {{
+                    "FILE YOUR GST RETURN NOW @" +
+                      ssPackage?.spackageDetail?.amount
+                  }}
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card col-md-3">
-            <h2 class="h2">ELIGIBILITY</h2>
-            <hr>
-        </div>
-        <app-getstarted-form>
-        </app-getstarted-form>
+      </div>
+      <div class="col-md-6">
+        <app-getstarted-form></app-getstarted-form>
+      </div>
     </div>
-</div>
+    <div class="row">
+      <div class="col-md-6">
+        <br /><br />
+        <br /><br />
+        <img
+          src="./../../../../assets/images/ITR/ITR-1_SAHAJ.png"
+          width="100%"
+        />
+        <p>* apart from Lottery, Racehorses, Legal Gambling etc.</p>
+      </div>
+      <div class="col-md-6">
+        <app-faq [ssFaqList]="serviceSite?.ssFaqList"></app-faq>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>
+              Eligible individuals for ITR-1 SAHAJ (Hindi terminology meaning
+              'easy')
+            </h5>
+          </div>
+          <div class="card-body">
+            <p>
+              Individuals who have earned their Income for a Financial Year only
+              through the following means are eligible to fill the ITR-1 SAHAJ
+              form.[4]
+            </p>
+            <ul
+              style="list-style-type: disc;"
+              *ngFor="let ssEligibility of serviceSite?.ssEligibilityList"
+            >
+              <li>
+                {{ ssEligibility?.seligibility?.description }}
+              </li>
+            </ul>
+            <p>
+              NOTE: Further, in a case where the income of another person like
+              spouse, minor child, etc. is to be clubbed with the income of the
+              assessee, this Return Form can be used only if the income being
+              clubbed falls into the above income categories.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h5>Manner of filing this Return Form</h5>
+          </div>
+          <div class="card-body">
+            This Return Form can be filed with the Income-tax Department in any
+            of the following ways,:- <br /><br />
+            <ul>
+              <li>
+                A.electronically on the e-filing web portal of Income-tax
+                Department (www.incometaxindiaefiling.gov.in) and verified in
+                any one of the following manner-<br /><br />
+                <ul>
+                  <li>a.digitally signing the verification part, or</li>
+                  <li>
+                    b.authenticating by way of electronic verification code
+                    (EVC), or
+                  </li>
+                  <li>
+                    c.by sending duly signed paper Form ITR-V (Acknowledgment)
+                    by post to CPC The Form ITR-V should reach within 120 days
+                    from the date of e-filing the return.
+                  </li>
+                </ul>
+              </li>
+              <br />
+              <hr />
+              <br />
+              <li>
+                B.in paper form, at the designated offices of Income-tax
+                Department, along with duly signed Form ITR-V. This mode of
+                furnishing return is permissible only in case of super senior
+                citizens (i.e. an individual of the age of 80 years or more at
+                any time during the previous year).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>
+              Eligible individuals for ITR-1 SAHAJ (Hindi terminology meaning
+              'easy')
+            </h5>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>
+                A.This Return Form should not be used by an individual who –
+                <ul>
+                  <br />
+                  <li>(a) is a Director in a company;</li>
+                  <li>
+                    (b) has held any unlisted equity shares at any time during
+                    &emsp;the previous year;
+                  </li>
+                  <li>
+                    (c) has any asset (including financial interest in any
+                    entity) located outside India;
+                  </li>
+                  <li>
+                    (d) has signing authority in any account located outside
+                    India; or
+                  </li>
+                  <li>(e) has income from any source outside India.</li>
+                </ul>
+              </li>
+              <li>
+                <br />
+                <hr />
+                <br />
+                B.This return form also cannot be used by an individual who has
+                any income of the following nature during the previous year:-
+                <ul>
+                  <br />
+                  <li>a.Profits and gains from business and professions;</li>
+                  <li>b.Capital gains;</li>
+                  <li>c.Income from more than one house property;</li>
+                  <li>
+                    d.Income under the head other sources which is of following
+                    nature:
+                    <ul>
+                      <li>a.winnings from lottery;</li>
+                      <li>b.activity of owning and maintaining race horses;</li>
+                      <li>
+                        c.income taxable at special rates under section 115BBDA
+                        or section 115BBE;
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    e.income to be apportioned in accordance with provisions of
+                    section 5A; or
+                  </li>
+                  <li>f.agricultural income in excess of ₹5,000.</li>
+                </ul>
+              </li>
+              <li>
+                <br />
+                <hr />
+                <br />
+                C.Further, this return form also cannot be used by an individual
+                who has any claims of loss/deductions/relief/tax credit etc. of
+                the following nature:-
+                <ul>
+                  <br />
+                  <li>
+                    a.any brought forward loss or loss to be carried forward
+                    under the head ‗Income from house property‘;
+                  </li>
+                  <li>b.loss under the head ‗Income from other sources‘;</li>
+                  <li>
+                    c.any claim of relief under section 90 and/or section 91;
+                  </li>
+                  <li>
+                    d.any claim of deduction under section 57, other than
+                    deduction under clause (iia) thereof (relating to family
+                    pension); or
+                  </li>
+                  <li>
+                    e.any claim of credit of tax deducted at source in the hands
+                    of any other person.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Submission of ITR-1 SAHAJ form
+          </h5>
+        </div>
+        <div class="card-body">
+          The form can be submitted physically at any Income Tax Returns Office.
+          An Acknowledgment Receipt can be obtained upon submission. In case of
+          Electronic Filing[5] of the form there are two alternatives. Firstly,
+          if a Digital Signature is obtained, the Form is uploaded online.
+          Secondly, the Form is downloaded, printed, signed, and a copy of the
+          acknowledgement is sent by post to the Income Tax Department's office
+          in Bengaluru. ITRV can now be verified online using Aadhaar Card or
+          Electronic Verification Code (EVC). The EVC can be generated either
+          via One Time Password sent to email and registered mobile number (if
+          income is less than INR 500,000) or via Net Banking. After online
+          verification Income Tax Assesses is not required to send ITRV to
+          Bangalore CPC.
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card col-md-6">
+        <app-taxcomputation
+          [ssStcList]="serviceSite?.ssStcList"
+        ></app-taxcomputation>
+      </div>
+      <div class="card col-md-6">
+        <div class="card-header misc-panel">
+          <h6 class="h6 text-white">DOCUMENTS REQUIRED</h6>
+        </div>
+        <div class="card-body">
+          <ul
+            *ngFor="
+              let ssDocumentRequired of serviceSite?.ssDocumentRequiredList
+            "
+          >
+            <li>
+              {{ ssDocumentRequired?.sdocumentRequired?.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="card col-md-6">
+        <app-whyrf></app-whyrf>
+      </div>
+      <div class="col-md-6" id="testimonial">
+        <app-mono-testimonial></app-mono-testimonial>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <header class="section-header">
+    <h3>OUR PACKAGES</h3>
+  </header>
+  <br />
+  <app-packages
+    [ssPackageList]="serviceSite?.ssPackageList"
+    [name]="serviceSite?.name"
+  ></app-packages>
+</section>

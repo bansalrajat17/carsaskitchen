@@ -32,12 +32,7 @@ export class GstComponent implements OnInit {
       .findById(+this.activatedRoute.snapshot.paramMap.get("id"))
       .subscribe((data) => {
         this.serviceSite = data;
-        console.log(data);
       });
-
-    this.ssGstTypeService
-      .findAll()
-      .subscribe((data) => (this.ssGstTypeArray = data));
   }
 
   openAccount() {

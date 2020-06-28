@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SsPackage } from '../../orm/SsPackage';
+import { ServiceSite } from '../../orm/ServiceSite';
 
 @Component({
   selector: 'app-packages',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./packages.component.scss']
 })
 export class PackagesComponent implements OnInit {
+
+  @Input() ssPackageList:SsPackage[];
+  @Input() name:string;
 
   constructor() { }
 

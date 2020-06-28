@@ -1,0 +1,76 @@
+<div class="card-header misc-panel">
+  <h6 class="h6 text-white">TAX COMPUTATION TABLES</h6>
+</div>
+<div class="card-body">
+  <div
+    class="panel-group"
+    id="taxComputationAccordion"
+    role="tablist"
+    aria-multiselectable="true"
+  >
+    <div
+      class="panel panel-default"
+      *ngFor="let ssStc of ssStcList; let i = index"
+    >
+      <div class="panel-heading" role="tab" attr.id="heading{{ i }}">
+        <p class="panel-title">
+          <a
+            [ngClass]="i == 0 ? '' : 'collapsed'"
+            data-toggle="collapse"
+            data-parent="#taxComputationAccordion"
+            attr.href="#collapse{{ i }}"
+            [attr.aria-expanded]="i == 0 ? 'true' : 'false'"
+            attr.aria-controls="collapse{{ i }}"
+          >
+            {{ ssStc?.staxComputation?.description | uppercase }}
+          </a>
+        </p>
+      </div>
+      <div
+        attr.id="collapse{{ i }}"
+        [ngClass]="
+          i == 0 ? 'panel-collapse collapse in' : 'panel-collapse collapse'
+        "
+        role="tabpanel"
+        attr.aria-labelledby="heading{{ i }}"
+      >
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th
+                  *ngFor="
+                    let stcHeading of ssStc?.staxComputation?.stcHeadingList
+                  "
+                >
+                  {{ stcHeading?.answerTableHeading?.heading | uppercase }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let athAatp of (ssStc?.staxComputation?.stcHeadingList)[0]
+                    ?.answerTableHeading?.athAatpList;
+                  let i = index
+                "
+              >
+                <td
+                  *ngFor="
+                    let stcHeading of ssStc?.staxComputation?.stcHeadingList;
+                    let j = index
+                  "
+                >
+                  {{
+                    (stcHeading?.answerTableHeading?.athAatpList)[i]
+                      ?.atpAnswerTablePoint?.description
+                  }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

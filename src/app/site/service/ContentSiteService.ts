@@ -12,10 +12,10 @@ export class ContentSiteService {
   constructor(private httpClient: HttpClient) { }
 
   findById(no: number) {
-    return this.httpClient.get(`${this.baseUrl}/get/ContentSite/no/${no}`);
+    return this.httpClient.get<ContentSite>(`${this.baseUrl}/get/ContentSite/no/${no}`);
   }
 
-  findAllById(nos:number[]){
+  findAllByIds(nos:number[]){
     return this.httpClient.post<ContentSite[]>(`${this.baseUrl}/get/ContentSiteList/nos`,nos);
   }
 }

@@ -45,6 +45,8 @@ import { MonoTestimonialComponent } from './site/main/testimonial/mono-testimoni
 import { HowitworksComponent } from './site/main/howitworks/howitworks.component';
 import { LoginSignupComponent } from './shared/auth/login-signup/login-signup.component';
 import { PackagesComponent } from './site/main/packages/packages.component';
+import { TaxcomputationComponent } from './site/main/taxcomputation/taxcomputation.component';
+import { WhyrfComponent } from './site/main/whyrf/whyrf.component';
 
 
 const appRoute: Routes = 
@@ -109,7 +111,9 @@ const appRoute: Routes =
     MonoTestimonialComponent,
     HowitworksComponent,
     LoginSignupComponent,
-    PackagesComponent
+    PackagesComponent,
+    TaxcomputationComponent,
+    WhyrfComponent
   ],
   entryComponents: [AccountComponent],
   imports: [
